@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular compras en el exterior</title>
+</head>
+<body>
+    <form>
+        Precio en USD <input type="text" id="nombre">
+    </form>
+
+    <h1>
+        Precio dolar: 
+    </h1>
+
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+    
+	$(function(){
+        var campoTexto = $("#nombre");
+
+        var titular = $("h1");		
+		var dolar=8.45;
+		var afip=1.35;		
+		var titularafip=$("textoafip");
+       
+        campoTexto.on("keyup", function(){
+            var precio=campoTexto.val(); //precio en dolares ingresado
+            
+            var sumausd=dolar * precio; //calculo ars sin impuestos
+            var afipusd=dolar *  afip; //calculo de impuesto neto
+            
+            var totalars=(dolar *  campoTexto.val() * afip); //calculo total pesos
+                        
+            //mostrar en pantalla   
+            titular.text(totalars);        
+            //document.writeln("AFIP " + afipusd);
+            
+			//document.write("Suma Dolar " + sumausd + " Precio " + precio); 
+            //document.write(" Precio " + precio);
+            //document.writeln(" Total " + totalars);            \
+            
+
+		});
+    });
+
+	</script>
+	
+	
+	
+	
+<script type="text/javascript">
+
+    
+</script>
+
+<p>
+
+
+
+<script type="text/javascript" src="http://www.preciodolar.com/js/get_preciodolar_ar2.js">
+    
+</script>
+
+</body>
+
+</html>
