@@ -1,0 +1,77 @@
+<html>
+
+<head>
+
+<title>	Calcular gastos en internet </title>
+
+<!-- <link href="style.css" rel="stylesheet" type="text/css"> --> 
+	
+<style type="text/css">      
+
+body {
+background-color: olive;
+font-size:14;
+font-family:tahoma;
+}	
+
+input[type="text"]{
+margin-bottom: 5px;
+}
+
+label {
+  display: block;
+  margin: .5em 0 0 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Simple form which will send a GET request -->
+
+<form action="" name="form1">  
+
+  <label for="get-precio">Precio: </label>
+  <input id="get-precio" type="text" name="Precio:" onchange="calcula(this.value);">     	
+  
+  <label for="TOTAL">AR$:</label>
+  <input type="text" id="total" disabled value="0">
+  
+  <label for="afip">AFIP:</label>
+  <input type="text" id="afip" disabled value="0">
+  
+  <label for="preciototal">TOTAL:</label>
+  <input type="text" id="preciototal" disabled value="0">  
+  
+  <label for="aduana">Aduana:</label>
+  <input type="text" id="aduana" disabled value="0">  
+  
+  
+</form>
+
+<div id="dolar">
+<label for="get-usd">Cotizacion del dolar:</label>
+<input id="get-usd" type="text" name="usd:">   
+</div>
+
+<script type="text/javascript">
+
+function calcula(precio) {		
+	var usd = 8.50;
+	var preciousd=(usd * precio);
+	var precioafip=preciousd * 0.35;
+	var sumaafip=preciousd * 1.35;	
+	var aduana=preciousd * 0.50;
+
+  document.getElementById("total").value=(preciousd);
+	document.getElementById("afip").value=(precioafip);
+	document.getElementById("preciototal").value=(sumaafip);
+	document.getElementById("aduana").value=(aduana);
+}
+</script>
+
+</body>
+
+</html>
