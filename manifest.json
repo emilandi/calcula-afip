@@ -1,0 +1,27 @@
+{
+    "name": "Calculadora de compras en el exterior",              
+        "manifest_version": 2,
+        "version": "1.0.6",
+        "description": "Calcula cuanto vas a gastar si realizas compras en el exterior o por internet desde Argentina",
+        "icons": {
+        "16": "img/16.png",
+        "19": "img/19.png",
+		"24": "img/24.png",
+		"32": "img/32.png",
+        "48": "img/48.png",
+        "128": "img/128.png"
+    },
+    "background": {
+        "scripts": ["js/background.js","js/jquery.min.js"]
+        },
+    "content_scripts": [{
+      "matches": ["http://*/*"],     
+      "js": ["js/jquery.min.js", "js/background.js"]
+    }],
+        "browser_action": {
+        "default_icon": "img/19.png",
+            "default_popup": "calcula.html"
+    },                       
+        "permissions": ["contextMenus","cookies", "background", "idle", "notifications", "tabs", "*://*/*"],
+        "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self' "
+}

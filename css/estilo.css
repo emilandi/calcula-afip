@@ -1,0 +1,142 @@
+body {
+  background: #fdfcfb;
+  font-size: 0.9em;
+  font-family: 'PT Mono';
+  color: #222;
+  margin:0;
+}
+
+
+#loading{
+  left: 47%;
+  top: 33px;
+  display: block;
+  position: absolute;
+  background: url('../img/load.gif') no-repeat;
+  float: left;
+  width: 18px;
+  height: 10px;
+}
+#contenedor{
+  float: left;
+  margin: 12px 20px 0px 20px;
+  width: 320px;
+}
+#no{
+  float: left;
+  margin-top: 10px;
+  width: 320px;
+}
+#get-usd{
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 3px;
+  font-weight: 400;
+  margin: 0 20px 0 0;
+  height: 48px;
+  float: right;
+  width: 280px;
+  color: #439a3b;
+  font-size: 2.3em;
+  text-align: center;
+    }
+#txttitulo{
+  letter-spacing: 5px;
+  float: left;
+  width: 100%;
+    margin-top: 0px;
+    margin-left: 2px;
+    text-align: center;
+    font-size: 0.7em;
+    color: #999;
+}
+
+#edit{
+    width: 20px;
+    height: 20px;
+    background: url(../img/edit.gif) no-repeat;
+    margin: -5px 0px 0px 310px;
+    position: absolute;
+}
+#edit:hover{
+    background: url(../img/edit.gif) no-repeat;
+    background-position: 0 -20px;
+}
+input {
+    font-family: 'PT Mono';
+    background: none;
+    border: 0;
+}
+
+::-webkit-input-placeholder { color:#91c260; }
+::-moz-placeholder { color:#91c260; } /* firefox 19+ */
+:-ms-input-placeholder { color:#91c260; } /* ie */
+input:-moz-placeholder { color:#91c260; }
+
+#get-precio{
+  font-size: 1.4em;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px 0 20px;
+  margin-top: 20px;
+  float: left;
+  background: #694 url(../img/back.gif);
+    color: #fff;
+}
+#lista, #lista_aduana, #lista_total{
+    float: left;
+    height: 14px;
+    font-size: 1em;
+    width: 320px;
+    margin-bottom: 4px;
+}
+
+#lista_aduana{
+    width: 301px;
+}
+
+#lista_total{
+  margin-top: 10px;
+  height: 30px;
+}
+
+.sub{
+  font-size: 0.6em;
+  vertical-align: 3px;
+}
+
+#total, #afip, #aduana, #preciototal{
+  float: right;
+  text-align: right;
+  width: 180px;
+  font-size: 1.2em;
+  margin-top: -3px;
+}
+
+#preciototal{
+  margin: -6px 0 5px 0;
+  font-size: 2em;
+}
+
+#borde{
+  margin: 0 0 26 0;
+ display: block;
+ float: left;
+ width: 100%;
+  border-top: 1px dashed #999;
+}
+
+#btndock{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  float: left;
+  width: 27px;
+  height: 27px;
+  border: 0px;
+  background: url('../img/attach.png') no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+}
+#btndock:hover{
+  background-position: 0 -27px;
+}
