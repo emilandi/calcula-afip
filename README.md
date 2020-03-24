@@ -1,7 +1,6 @@
-Calculadora de compras en el exterior 
+Calculadora de compras en el exterior.-
+
 (Chrome Extension)
 =============================================
 
-Calculadora de precios para compras en el exterior desde argentina
-
-
+Calculadora de gastos para compras realizadas en el exterior desde Argentina
