@@ -1,5 +1,4 @@
 Calculadora de compras en el exterior.-
-
 (Chrome Extension)
 =============================================
 
