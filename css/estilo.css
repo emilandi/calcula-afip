@@ -1,11 +1,17 @@
+html{
+  height: 400px;
+}
+
 body {
   background: #fdfcfb;
   font-size: 0.9em;
   font-family: 'PT Mono';
   color: #222;
   margin:0;
+  width:360px;
+  height:320px;
+  overflow: hidden
 }
-
 
 #loading{
   left: 47%;
@@ -17,54 +23,110 @@ body {
   width: 18px;
   height: 10px;
 }
+
+#edit{   
+    background: url(../img/edit.gif) no-repeat;
+    /* margin: -5px 0px 0px 85%;
+    position: absolute;     */
+}
+
+#optrate{
+  /*background: url('../img/change16.png') no-repeat; */
+  background: url('../img/usdtoeur1.jpeg') no-repeat; 
+  cursor: pointer;
+  /* margin: 25px 10px 10px 85%;
+  position: absolute; */
+
+/*  width: 30px;
+  height:30px; 
+  cursor: pointer;  
+  margin: 20px 10px 10px 302px;
+  position: absolute;*/
+}
+
+#btndark{  
+  width: 25px;
+  height: 25px;
+  background: url('../img/Antu_contrast.svg') no-repeat;
+  display: none;
+  /* //background: url('../img/dark.svg') no-repeat;   
+  //position: absolute; */
+}
+
+.btnpanel{
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#panel{
+  height: 50px;  
+  padding-top: 20px;
+  width: 30px;  
+  /*display: inline;*/
+  position: relative;
+  margin-left: 0px;
+  margin-top: 5px;
+  left: 90%;
+}
+
 #contenedor{
   float: left;
-  margin: 12px 20px 0px 20px;
-  width: 320px;
+  margin: 20px 20px 0px 20px;
+  width: 90%;  
 }
+
 #no{
   float: left;
   margin-top: 10px;
-  width: 320px;
+  width: 100%;  
 }
+
 #get-usd{
+  background: none;
   font-family: 'Dosis', sans-serif;
   letter-spacing: 3px;
   font-weight: 400;
-  margin: 0 20px 0 0;
+  margin: 0px 0px 0px 60px;
   height: 48px;
-  float: right;
-  width: 280px;
-  color: #439a3b;
+  /* float: right; */
+  /*width: 280px;*/
+  width: 200px;
   font-size: 2.3em;
   text-align: center;
-    }
+}
+
 #txttitulo{
   letter-spacing: 5px;
   float: left;
   width: 100%;
-    margin-top: 0px;
-    margin-left: 2px;
-    text-align: center;
-    font-size: 0.7em;
-    color: #999;
+  margin-top: 0px;
+  margin-left: 2px;
+  text-align: center;
+  font-size: 0.7em;
+  color: #999;
 }
 
-#edit{
-    width: 20px;
-    height: 20px;
-    background: url(../img/edit.gif) no-repeat;
-    margin: -5px 0px 0px 310px;
-    position: absolute;
-}
 #edit:hover{
     background: url(../img/edit.gif) no-repeat;
     background-position: 0 -20px;
 }
+
 input {
     font-family: 'PT Mono';
     background: none;
     border: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+/* para quitar flechas en campos numericos*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 ::-webkit-input-placeholder { color:#91c260; }
@@ -78,20 +140,57 @@ input:-moz-placeholder { color:#91c260; }
   height: 50px;
   padding: 0 20px 0 20px;
   margin-top: 20px;
-  float: left;
-  background: #694 url(../img/back.gif);
-    color: #fff;
-}
-#lista, #lista_aduana, #lista_total{
-    float: left;
-    height: 14px;
-    font-size: 1em;
-    width: 320px;
-    margin-bottom: 4px;
+  float: left;	
+  color: #fff;
+  /*background: #694 url(../img/back.gif);*/
 }
 
-#lista_aduana{
-    width: 301px;
+.dolar{
+  /*color: #fff;*/
+  color: #439a3b;
+  background: #694 url(../img/back.gif);    
+}
+
+.euro{    
+    background: #694 url(../img/back_01.gif);  
+    color: #fff;
+    /*color: #65469b;*/
+    color: #394089;
+}
+
+
+.dark{
+  background-color: #1f202d;
+  /* color: #ffffffe0;
+  color:  #999  ; */
+  color: #333;  
+}
+
+#lista, #lista_aduana, #lista_total{
+  float: left;
+  height: 14px;
+  font-size: 1em;
+  width: 100%;
+  margin-bottom: 4px;
+  margin-right:10px;
+}
+
+.css-label{
+  margin-bottom: 4px;
+}
+
+/* #lista_aduana{
+   width: 100%; 
+} */
+
+#aduana{
+margin:0px 20px 0px 0px;
+}
+
+#tasa{
+	width:50px;
+	margin-left:60px;
+	text-align: right;
 }
 
 #lista_total{
@@ -104,10 +203,10 @@ input:-moz-placeholder { color:#91c260; }
   vertical-align: 3px;
 }
 
-#total, #afip, #aduana, #preciototal{
+#total, #afip, #aduana,#tasa, #preciototal,#optaduana{
   float: right;
-  text-align: right;
-  width: 180px;
+  text-align: right;  
+  width: 150px;
   font-size: 1.2em;
   margin-top: -3px;
 }
@@ -115,15 +214,24 @@ input:-moz-placeholder { color:#91c260; }
 #preciototal{
   margin: -6px 0 5px 0;
   font-size: 2em;
+  width:250px;
 }
 
 #borde{
-  margin: 0 0 26 0;
- display: block;
- float: left;
- width: 100%;
-  border-top: 1px dashed #999;
+margin: 0 0 26 0;
+display: block;
+float: left;
+width: 100%;
+border-top: 1px dashed #999;
 }
+
+cursor{
+	color:white;
+}
+
+/*#get-precio:hover{
+	cursor:white;
+}*/
 
 #btndock{
   display: block;
