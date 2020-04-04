@@ -101,37 +101,30 @@ function consulta () {
 	console.log('Consultando URL:' + url + ' rate: ' + rate + ' sitio: ' + sitio);
 }
 
-function getParam(){
-	var param = new Array;	
-	param = fnGetValues('sitio');
-	param.push();
-}
-
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-        console.log("infodolar.js recibio una solicitud " ,request);		
-		var action = request.action;
-		if(action=='cotiza'){						
-			rate = fnGetValues('rate');						
-			url = getUrl(rate);
-			console.log('Consultando :' + url + ' Rate: ' + rate);			
+	console.log("infodolar.js recibio una solicitud " ,request);		
+	var action = request.action;
+	if(action=='cotiza'){						
+		rate = fnGetValues('rate');						
+		url = getUrl(rate);
+		console.log('Consultando :' + url + ' Rate: ' + rate);			
 
-			var xhr = new XMLHttpRequest();
-			xhr.open('GET', url, true);
-			xhr.onreadystatechange = function (e) {				
-				if (xhr.readyState == 4) {
-					if(xhr.status == 200){
-						var resp = xhr.responseText;
-						var data = datos(resp);	
-						sendResponse(data);
-					}else{
-						console.log("Error loading page\n");
-					}
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', url, true);
+		xhr.onreadystatechange = function (e) {				
+			if (xhr.readyState == 4) {
+				if(xhr.status == 200){
+					var resp = xhr.responseText;
+					var data = datos(resp);	
+					sendResponse(data);
+				}else{
+					console.log("Error loading page\n");
 				}
-			};
-			xhr.send(null); 			
-			return true;
-
-		}
+			}
+		};
+		xhr.send(null); 			
+		return true;
+	}
     }
 );
 
