@@ -5,7 +5,7 @@ Extension para Google Chrome.
 Link: https://chrome.google.com/webstore/detail/calculadora-de-compras-en/jdiiofgmndfmjgmgkdogjkelfgjnicim
 
 
-Calcula cuanto vas a gastar si realizas compras en el exterior o por internet desde Argentina y ademmas con esta esta extensión podes:
+Calcula cuanto vas a gastar si realizas compras en el exterior o por internet desde Argentina, ademas con esta esta extensión tambien podes:
 
 - Obtener la cotización oficial del dolar.
 - Calcular el importe para el impuesto Aduanero del 50%.
