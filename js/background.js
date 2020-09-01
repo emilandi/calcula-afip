@@ -69,8 +69,7 @@ function getword(info,tab) {
 		console.log('Seleccione un importe valido');
 	}else{
 		createPanel(data);
-	};
-			
+	};			
 }
 
 function createPanel (data) {
@@ -97,7 +96,7 @@ function createPanel (data) {
 				// chrome.tabs.getSelected(null, function(tabs) {
 				// 	chrome.tabs.sendRequest(tabs.id, { action: data });
 				// });			
-				sel=null;		
+				sel=null;
 			}			
 		});
 		

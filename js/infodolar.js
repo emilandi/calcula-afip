@@ -8,7 +8,7 @@ https://api.exchangerate-api.com/v4/latest/EUR
 #2 dolarsi.com
 https://www.dolarsi.com/api/api.php?type=dolar
 https://www.dolarsi.com/api/api.php?type=euro
-
+https://www.dolarsi.com/api/api.php?type=valoresprincipales
 */
 
 var url;
@@ -17,7 +17,7 @@ var json;
 var data;
 
 //retorna url de consulta en base al id sitio
-function getUrl (tipo) {		
+function getUrl (tipo) {	
 	
 	sitio = fnGetValues('sitio');
 	
@@ -26,14 +26,14 @@ function getUrl (tipo) {
 			url = 'https://api.exchangerate-api.com/v4/latest/USD';			
 		}		
 		if (sitio==2) {
-			url = 'https://www.dolarsi.com/api/api.php?type=dolar'		
+			url = 'https://www.dolarsi.com/api/api.php?type=dolar';
 		}		
 	}else{		
 		if (sitio==1) {
-			url = 'https://api.exchangerate-api.com/v4/latest/EUR';			
+			url = 'https://api.exchangerate-api.com/v4/latest/EUR';
 		}		
 		if (sitio==2) {
-			url='https://www.dolarsi.com/api/api.php?type=euro';				
+			url='https://www.dolarsi.com/api/api.php?type=euro';			
 		}
 	}
 	
@@ -141,11 +141,11 @@ function mostrar (data) {
 
 	var resultado=data;	
 	if(undefined != resultado) {		
-		
+		var solid =  parseFloat(resultado * 1.3).toFixed(2);
 		var tipo = fnGetValues('rate');		
 		if (tipo=='USD') {
 			var txt = 'AR$ = 1 U$D';
-			var mensaje='Cotizacion actual del dolar: ';
+			var mensaje='\nDolar Oficial:    ' + resultado + '\nDolar Solidario: '  + solid;
 			var color = 'olive' 				
 		}else{
 			var txt = 'AR$ = 1 EUR';    		    	
@@ -158,7 +158,8 @@ function mostrar (data) {
 		if (fixusd!=undefined) {
 			chrome.browserAction.setBadgeText({text: fixusd}); // We have 10+ unread items.	
 			chrome.browserAction.setBadgeBackgroundColor({color:color});		
-	    	chrome.browserAction.setTitle({title : msj + fixusd});
+	    	//chrome.browserAction.setTitle({title : msj + fixusd});
+	    	chrome.browserAction.setTitle({title : msj });
 		};		
 	
 		//chrome.runtime.sendMessage({data: rate}); // cuando tenga datos que envie al front
