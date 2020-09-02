@@ -25,29 +25,37 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 </head>
-	
-
 
 <body>
 	<header>
-		<img id="logo" src="https://lh3.googleusercontent.com/ZubI-ccfc6VbYbD6R9uN0S2p5fEpQlww8-iRbHJF2uzQDV7K2rYB_dZc_l9GVZlcK1ww4w5u5Q=w128-h128-e365" alt="">
+		
+		<a href="\" class="">
+			<img id="logo" src="https://lh3.googleusercontent.com/ZubI-ccfc6VbYbD6R9uN0S2p5fEpQlww8-iRbHJF2uzQDV7K2rYB_dZc_l9GVZlcK1ww4w5u5Q=w128-h128-e365" alt="">
+		</a>
+
 		<h3>Calculadora de compras en el exterior</h3>
 		<nav id="main">			
-			<a href="https://chrome.google.com/webstore/detail/calculadora-de-compras-en/jdiiofgmndfmjgmgkdogjkelfgjnicim?hl=es-419" target="_blank">Chrome</a>					
-			<a href="https://addons.mozilla.org/es/firefox/addon/calculadora-afip/" target="_blank">firefox</a>
-			<a href="#">Desktop App</a>						
+			<a href="https://chrome.google.com/webstore/detail/calculadora-de-compras-en/jdiiofgmndfmjgmgkdogjkelfgjnicim?hl=es-419" target="_blank">
+				<img class="iconos" src="chrome.png" alt="Chrome extension">				
+			</a>					
+			<a href="https://addons.mozilla.org/es/firefox/addon/calculadora-afip/" target="_blank">
+				<img class="iconos" src="firefox2.png" alt="Complemento para firefox">				
+			</a>
+			<a href="#">
+				<img class="iconos" src="win.png" alt="Desktop App">
+			</a>						
+
 		</nav>
 	</header>
-
-	
-
-	<div id="btndark" class="btnpanel" title="MODO NOCTURNO"></div>
 	
 	<div id="container">	
 		<label id="loading"></label> 
 		<!-- <button id="btncopy" title="Copiar.."> COPIAR </button> -->
-		<input id="get-usd" min="0" name="usd" disabled value="" size="20">
-		<label id="txttitulo">AR$ = 1 U$D</label> 
+		
+		<div id="data">
+			<input id="get-usd" min="0" name="usd" disabled value="" size="20">
+			<label id="txttitulo">AR$ = 1 U$D</label> 		
+		</div>
 
 		<div id="panel">
 			<div id="edit" class="btnpanel" title="Editar valor"></div>			
@@ -55,30 +63,29 @@
 			<div id="btndark" class="btnpanel" title="MODO NOCTURNO"></div>
 		</div>
 
-		<div id="borde2">	</div>
 
+		<div id="borde2">	</div>
 	
   		<!-- <input id="get-precio" placeholder="Importe" name="Precio:" size=20> -->
      	<input id="get-precio" maxlength="8" placeholder="Importe" size="20" class="dolar">
 	
     	<div id="no">  </div>		
 
-  		<label id="lista" for="total" title="PESOS ARGENTINOS">AR$
-  			<input type="label" id="total" disabled value="0">
-  		</label>
+		<input type="text" id="total" disabled value="0">
+		<label id="lista" for="total" title="PESOS ARGENTINOS">AR$</label>		
       
     	<div id="borde"></div>
   		
-    	<label id="lista" for="afip" title="IMPUESTO SOLIDARIO">AFIP<span class="sub">30%</span>
-  			<input type="label" id="afip" disabled value="0">
-  		</label>
+		<input type="text" id="afip" disabled value="0">
+
+		<label id="lista" for="afip" title="IMPUESTO SOLIDARIO">AFIP<span class="sub">30%</span></label>
 		
 		<div id="borde"></div>  			
 		
 		<input type="checkbox" name="opt1" id="optaduana" class="css-checkbox" />
         <label id="lista_aduana" for="optaduana" class="css-label" title="Solo si recibis un envio desde el exterior.">ADUANA<span class="sub">50%</span>
-        	<input type="label" for="optaduana" id="aduana" class="css-label" disabled value="0">
         </label>
+		<input type="text" for="optaduana" id="aduana" class="css-label" disabled value="0">
 		
 		<div id="borde"></div>
 		
@@ -86,10 +93,11 @@
 		
 		<label id="lista_correo" for="optcorreo" class="css-label" title="TASA CORREO">
 			TASA CORREO
-        	<input type="label" for="optcorreo" id="tasa" class="css-label" disabled value="0">
-        </label>
+		</label>
 		
-		<div id="borde"></div>	
+		<input type="text" for="optcorreo" id="tasa" class="css-label" disabled value="0">
+		
+		<div id="borde"></div>
 		
 		<!-- <input type="checkbox" name="opt2" id="optfranq" class="css-checkbox" /> -->
         <!-- <label for="optfranq" class="css-label" title="Franquicia primera compra del año. ">Franquicia u$25<input type="label" id="arsfran" for="optfranq" class="css-label"> -->

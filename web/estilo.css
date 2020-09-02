@@ -24,11 +24,24 @@ h3{
   margin-top: 20px;
   margin-left: 10px;
   display: block;
+  
+  float: right;
+  margin-top: 20px;
+  margin-right:10%;
+
+}
+
+.iconos{
+  width: 30px;
+  margin-left: 20px;
 }
 
 #logo{
   width: 60px;
-  display: inline-block;
+  margin-left: 10%;
+  margin-top: 20px;
+  display: inline-block;  
+  border-radius: 20px;  
 }
 
 footer{
@@ -40,7 +53,7 @@ footer{
 
 header{
   width: 100%; 
-  height: 120px;  
+  height: 100px;  
   color:white;
   background-color: #20123a;
   /* position: fixed;
@@ -51,6 +64,7 @@ header{
 
 a{
   color:white;
+  text-decoration: none !important;
 }
 
 #repo{
@@ -68,16 +82,17 @@ body {
   color: #222;
   /* margin-left: 10%; */
   width:100%;
-  height:80%;  
-  margin: 0 !important;
-  
+  /* height:80%;   */
+  margin: 0 !important;  
 }
+
 #links{
-  padding: 10px;  
+  padding: 10px;
 }
 
 #container{
   width: 80%;
+  height: 500px; 
   border: 1px solid green;
   border-radius: 10px;
   padding: 10px;
@@ -138,17 +153,15 @@ body {
   margin-left: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+  display: block;
 }
 
 #panel{
-  height: 50px;  
-  padding-top: 20px;
-  width: 30px;  
+  display: inline-block;  
   /*display: inline;*/
   position: relative;
   margin-left: 0px;
-  margin-top: 5px;
-  left: 90%;
+  margin-top: 5px;  
 }
 
 #contenedor{
@@ -163,6 +176,11 @@ body {
   width: 100%;  
 }
 
+#data{
+  width: 80%;
+  display: inline-block;
+}
+
 #get-usd{
   background: none;
   font-family: 'Dosis', sans-serif;
@@ -172,15 +190,16 @@ body {
   height: 48px;
   /* float: right; */
   /*width: 280px;*/
-  width: 100%;
+  width: 80%;
   font-size: 2.3em;
   text-align: center;
+  display: inline-block;
 }
 
 #txttitulo{
-  letter-spacing: 5px;
-  float: left;
-  width: 100%;
+  display: inline-block;
+  letter-spacing: 5px;  
+  width: 80%;
   margin-top: 0px;
   margin-left: 2px;
   text-align: center;
@@ -264,8 +283,7 @@ li{
   float: left;
   margin:5px;
   padding: 5px;
-  list-style: none;
-  
+  list-style: none;  
 }
 
 a{
