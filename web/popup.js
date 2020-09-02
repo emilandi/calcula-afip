@@ -6,7 +6,7 @@ $(document).ready(init);
 function init () {
 	console.log('ready');
 	
-	$('#get-usd').val('73');
+	$('#get-usd').val('');
 	$('#get-precio').attr('placeholder','loading...');	
 	
 	// get value rate USD/EUR;
@@ -36,27 +36,21 @@ function init () {
     	document.body.className="ligth";
 	}
 
-	//conext
-	chrome.runtime.sendMessage({action: "context" },function (response) {
-		console.log('enviando peticion: context');		
-		console.log('respuesta: ' + response);		
-		if(response){
-			document.getElementById('get-precio').value=response;
-		}
-	}); 
+	fnSetValues('sitio',1);
 
-	var attach = fnGetValues('attach');	
-	var elem = document.getElementById('btndock');
-	
-	if(attach=='true'){
-		elem.style.display='none';
-	}else{
-		elem.style.display='block';
-	}
+	//conext
+	// chrome.runtime.sendMessage({action: "context" },function (response) {
+	// 	console.log('enviando peticion: context');		
+	// 	console.log('respuesta: ' + response);		
+	// 	if(response){
+	// 		document.getElementById('get-precio').value=response;
+	// 	}
+	// }); 
+
 
 	consulta();
 }
-
+/*
 function consulta () {
 
 	console.clear();
@@ -65,16 +59,16 @@ function consulta () {
 	var src = fnGetValues('rate');
 	var aduana = fnGetValues('optaduana');		
 	
-	chrome.runtime.sendMessage({action:"cotiza"},function (response) {
-		console.log('enviando peticion: cotiza');
-		console.log('La respuesta es: ' + response);
-		if(response){
-			showFade(response);
-		}
-    });	
+	// chrome.runtime.sendMessage({action:"cotiza"},function (response) {
+	// 	console.log('enviando peticion: cotiza');
+	// 	console.log('La respuesta es: ' + response);
+	// 	if(response){
+	// 		showFade(response);
+	// 	}
+    // });	
 	
 	console.log('Consultando Rate:' + src , 'Sitio:' + sitio , 'Aduana:' + aduana);	
-}
+}*/
 
 function showFade(resultado) {	
 	
@@ -102,11 +96,11 @@ function showFade(resultado) {
 		});	
 		var msj=mensaje;
 		var fixusd = parseFloat(usd).toFixed(2);	
-		if (fixusd!=undefined) {
-			chrome.browserAction.setBadgeText({text: fixusd}); // We have 10+ unread items.	
-			chrome.browserAction.setBadgeBackgroundColor({color:color});		
-			chrome.browserAction.setTitle({title : msj + fixusd});
-		};		
+		// if (fixusd!=undefined) {
+		// 	chrome.browserAction.setBadgeText({text: fixusd}); // We have 10+ unread items.	
+		// 	chrome.browserAction.setBadgeBackgroundColor({color:color});		
+		// 	chrome.browserAction.setTitle({title : msj + fixusd});
+		// };		
 	
 	
 	}else{	    
@@ -254,27 +248,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		el.style.color='white';
 	}
 	
-	//crear ventana de tipo panel 
-	
-	document.getElementById("btndock").addEventListener('click', createPanel);
-
-	function createPanel() {		
-		
-		fnSetValues('attach', "true");									
-		
-		var options ={
-			'url': '../calcula.html', 
-			'width':380, 
-			'height':450,
-			'type': 'panel'
-		};					
-		
-		chrome.windows.create(options,function(e){
-			console.log(e);
-		});	
-		
-		self.close();
-	}
 	
 	//desahabiliar edit getdolar una vez que pierde el foco	
 	var obj=document.getElementById("get-usd")	
@@ -290,11 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	});
 
-	getattach = localStorage.getItem('attach');
-    if (getattach == "true") {
-    	document.getElementById("btndock").style.visibility='hidden';
-    };
-
+	
 	document.getElementById("optrate").addEventListener('click', function () { 											
 		getRate = fnGetValues('rate');	
 		fnRateChange(getRate);						

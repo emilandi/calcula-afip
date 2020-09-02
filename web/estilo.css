@@ -1,11 +1,64 @@
-html{
-  height: 400px;
+
+
+h3{
+/* color:red; */
+/* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */  
+  /* margin-left:30px;
+  padding-top: 20px;
+  width: 500px;*/
+  
+  /* display: inline;
+
+  font-family:'PT Mono';
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 2.25rem;
+  color:white;   */
+
+  display: inline;
+  margin-left: 10px;  
 }
 
-h1{
-color:red;
-font-size: larger;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+#main{
+  margin-top: 20px;
+  margin-left: 10px;
+  display: block;
+}
+
+#logo{
+  width: 60px;
+  display: inline-block;
+}
+
+footer{
+  height: 150px;
+  width: 100%;
+  background-color: #20123a;
+  color:yellow;
+}
+
+header{
+  width: 100%; 
+  height: 120px;  
+  color:white;
+  background-color: #20123a;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; */
+}
+
+a{
+  color:white;
+}
+
+#repo{
+  display: block;    
+}
+
+#links{
+  display: block;
 }
 
 body {
@@ -13,21 +66,40 @@ body {
   font-size: 0.9em;
   font-family: 'PT Mono';
   color: #222;
-  margin-left: 20%;
-  width:60%;
-  height:80%;
-  overflow: hidden
+  /* margin-left: 10%; */
+  width:100%;
+  height:80%;  
+  margin: 0 !important;
+  
+}
+#links{
+  padding: 10px;  
+}
+
+#container{
+  width: 80%;
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 30%;
+  margin-top: 10px;
+  padding-bottom: 80px;
+  max-width: 40%;
+  min-width: 400px;
+  margin-bottom: 50px;
 }
 
 #loading{
-  left: 47%;
-  top: 33px;
+  /* left: 47%; */
+  /* top: 33px; */
   display: block;
   position: absolute;
   background: url('../img/load.gif') no-repeat;
-  float: left;
+  /* float: left; */
   width: 18px;
   height: 10px;
+  margin-left: 25%; 
+  margin-top: 20px;
 }
 
 #edit{   
@@ -96,11 +168,11 @@ body {
   font-family: 'Dosis', sans-serif;
   letter-spacing: 3px;
   font-weight: 400;
-  margin: 0px 0px 0px 60px;
+  /* margin: 0px 0px 0px 60px; */
   height: 48px;
   /* float: right; */
   /*width: 280px;*/
-  width: 200px;
+  width: 100%;
   font-size: 2.3em;
   text-align: center;
 }
@@ -148,6 +220,7 @@ input:-moz-placeholder { color:#91c260; }
   margin-top: 20px;
   float: left;	
   color: #fff;
+  margin-bottom: 20px;
   /*background: #694 url(../img/back.gif);*/
 }
 
@@ -157,13 +230,15 @@ input:-moz-placeholder { color:#91c260; }
   background: #694 url(../img/back.gif);    
 }
 
+.icon{
+  width: 200px;  
+}
 .euro{    
     background: #694 url(../img/back_01.gif);  
     color: #fff;
     /*color: #65469b;*/
     color: #394089;
 }
-
 
 .dark{
   background-color: #1f202d;
@@ -177,13 +252,26 @@ input:-moz-placeholder { color:#91c260; }
   height: 14px;
   font-size: 1em;
   width: 100%;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   margin-right:10px;
 }
 
 .css-label{
   margin-bottom: 4px;
 }
+
+li{
+  float: left;
+  margin:5px;
+  padding: 5px;
+  list-style: none;
+  
+}
+
+a{
+  text-decoration: none;  
+}
+
 
 /* #lista_aduana{
    width: 100%; 
@@ -224,11 +312,11 @@ margin:0px 20px 0px 0px;
 }
 
 #borde{
-margin: 0 0 26 0;
-display: block;
-float: left;
-width: 100%;
-border-top: 1px dashed #999;
+  margin: 0 0 26 0;
+  display: block;
+  float: left;
+  width: 100%;
+  border-top: 1px dashed #999;
 }
 
 cursor{

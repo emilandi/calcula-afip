@@ -7,63 +7,73 @@
     <link href='http://fonts.googleapis.com/css?family=Dosis:400,500,600|Lora' rel='stylesheet' type='text/css'>
 
 	<title>	Calculadora de compras en internet</title>
-
+	<script	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="jquery.min.js"></script>	    
 	<script src="popup.js"></script>
-	
-	<!-- 
-		<script src="js/infodolar.js"></script>  
-	 -->
+	<script src="infodolar.js"></script> 	
 
 	<link href="estilo.css" rel="stylesheet" type="text/css">
 	<link href="check.css" rel="stylesheet" type="text/css">
 
-	<h1>Calculadora de compras en el exterior</h1>
 
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 </head>
+	
+
 
 <body>
+	<header>
+		<img id="logo" src="https://lh3.googleusercontent.com/ZubI-ccfc6VbYbD6R9uN0S2p5fEpQlww8-iRbHJF2uzQDV7K2rYB_dZc_l9GVZlcK1ww4w5u5Q=w128-h128-e365" alt="">
+		<h3>Calculadora de compras en el exterior</h3>
+		<nav id="main">			
+			<a href="https://chrome.google.com/webstore/detail/calculadora-de-compras-en/jdiiofgmndfmjgmgkdogjkelfgjnicim?hl=es-419" target="_blank">Chrome</a>					
+			<a href="https://addons.mozilla.org/es/firefox/addon/calculadora-afip/" target="_blank">firefox</a>
+			<a href="#">Desktop App</a>						
+		</nav>
+	</header>
 
-<label id="loading"></label> 
-
-<div id="btndark" class="btnpanel" title="MODO NOCTURNO"></div>
-
-<div id="contenedor">	
 	
-	<!-- <button id="btncopy" title="Copiar.."> COPIAR </button> -->
-	<input id="get-usd" min="0" name="usd" disabled value="" size="20">
-	<label id="txttitulo">AR$ = 1 U$D</label>
-  
-</div>
 
-<div id="panel">
-	<div id="edit" class="btnpanel" title="Editar valor"></div>			
-	<div id="optrate" class="btnpanel" title="USD/EUR"></div>
 	<div id="btndark" class="btnpanel" title="MODO NOCTURNO"></div>
-</div>
+	
+	<div id="container">	
+		<label id="loading"></label> 
+		<!-- <button id="btncopy" title="Copiar.."> COPIAR </button> -->
+		<input id="get-usd" min="0" name="usd" disabled value="" size="20">
+		<label id="txttitulo">AR$ = 1 U$D</label> 
 
-<div id="borde2">	</div>
+		<div id="panel">
+			<div id="edit" class="btnpanel" title="Editar valor"></div>			
+			<div id="optrate" class="btnpanel" title="USD/EUR"></div>
+			<div id="btndark" class="btnpanel" title="MODO NOCTURNO"></div>
+		</div>
 
-<form action="" name="form1" autocomplete="off">
+		<div id="borde2">	</div>
+
+	
   		<!-- <input id="get-precio" placeholder="Importe" name="Precio:" size=20> -->
-      <input id="get-precio" maxlength="8" placeholder="Importe" size="20" class="dolar">
-
-<div id="contenedor">
-    <div id="no">  		
+     	<input id="get-precio" maxlength="8" placeholder="Importe" size="20" class="dolar">
+	
+    	<div id="no">  </div>		
 
   		<label id="lista" for="total" title="PESOS ARGENTINOS">AR$
   			<input type="label" id="total" disabled value="0">
   		</label>
       
-      <div id="borde"></div>
-
+    	<div id="borde"></div>
   		
-      <label id="lista" for="afip" title="IMPUESTO SOLIDARIO">AFIP<span class="sub">30%</span>
+    	<label id="lista" for="afip" title="IMPUESTO SOLIDARIO">AFIP<span class="sub">30%</span>
   			<input type="label" id="afip" disabled value="0">
   		</label>
-        <div id="borde"></div>  	
 		
+		<div id="borde"></div>  			
 		
 		<input type="checkbox" name="opt1" id="optaduana" class="css-checkbox" />
         <label id="lista_aduana" for="optaduana" class="css-label" title="Solo si recibis un envio desde el exterior.">ADUANA<span class="sub">50%</span>
@@ -86,15 +96,24 @@
         <!-- </label> -->
 		
         <!-- <div id="borde"></div> -->
+    
+	  <label id="lista_total" for="preciototal">TOTAL<input type="label" id="preciototal" disabled value="0"></label>
+	  <!-- <button id="btndock" value="Attach" title="Abrir esta aplicacion en ventana independiente">	</button>	 -->
 
-    </div>
-  	<label id="lista_total" for="preciototal">TOTAL<input type="label" id="preciototal" disabled value="0"></label>
+	</div>
 
-</form>
-</div>
-	<button id="btndock" value="Attach" title="Abrir esta aplicacion en ventana independiente">		
-	</button>	
-</div>
+	<footer>
+		
+		<div id="links">			
+				<a href="https://chrome.google.com/webstore/detail/calculadora-de-compras-en/jdiiofgmndfmjgmgkdogjkelfgjnicim?hl=es-419">Chrome Extension</a>
+				<a href="#">Complemento para firefox</a>
+				<a href="#">Desktop App</a>			
+		</div>
+		
+		<div class="repo">
+			<a href="https://github.com/emilandi/calcula-afip">github</a>
+		</div>
 
+	</footer>
 </body>
 </html>
