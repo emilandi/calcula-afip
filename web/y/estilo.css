@@ -15,11 +15,9 @@ h3{
   letter-spacing: 0;
   line-height: 2.25rem;
   color:white;   */
-  font-size: 1.4em !important;   
-  margin-left: 100px; 
-  position: absolute;
-  top:30px;  
-  
+  font-size: 2em !important;
+  display: inline;
+  margin-left: 10px;  
 }
 
 #main{
@@ -38,15 +36,12 @@ h3{
   margin-left: 20px;
 }
 
-#logo{  
+#logo{
+  /* width: 60px; */
   margin-left: 10%;
   margin-top: 20px;
   display: inline-block;  
   border-radius: 20px;  
-}
-
-#logo img {
-  width: 60px;
 }
 
 footer{
@@ -93,7 +88,6 @@ body {
   width:100%;
   /* height:80%;   */
   margin: 0 !important;  
-  overflow-x: hidden;
 }
 
 #links{  
@@ -269,9 +263,11 @@ input:-moz-placeholder { color:#91c260; }
   /*background: #694 url(../img/back.gif);*/
 }
 
+
 svg{
   fill: currentColor;
 }
+
 
 .dolar{
   /*color: #fff;*/
@@ -296,32 +292,13 @@ svg{
   color: #333;  
 }
 
- #lista, #lista_aduana, #lista_correo, #lista_total{
+#lista, #lista_aduana, #lista_total{
   float: left;
-  /* height: 14px; */
-  /* font-size: 1em; */
-  width: 40%;
-  margin-bottom: 0 !important;   
-  margin-left: 10px; 
-  /* font-size: 1.2em; */
-} 
-
-#lista_aduana,#lista_correo{  
-  padding-top: 1px;
-  margin-top: 8px;
-}
-
-#total, #afip, #aduana,#tasa,#total,#optaduana{
-  float: right;
-  text-align: right;  
+  height: 14px;
+  font-size: 1em;
   width: 50%;
-  font-size: 1.2em;
-  /* margin-top: -3px;   */
-}
-
-#divtotal{
-  margin-bottom: 100px;
-  display: block;
+  margin-bottom: 10px;
+  margin-right:10px;  
 }
 
 .css-label{
@@ -364,17 +341,21 @@ margin:0px 0px 0px 0px;
   vertical-align: 3px;
 }
 
-
+#total, #afip, #aduana,#tasa, #preciototal,#optaduana{
+  float: right;
+  text-align: right;  
+  width: 150px;
+  font-size: 1.2em;
+  margin-top: -3px;
+}
 
 #preciototal{
   margin: -6px 0 5px 0;
   font-size: 2em;
-  width: 200px;
-  float: right;
-  text-align: right; 
+  width:150px;
 }
 
-.borde{
+#borde{
   margin: 0 0 26 0;
   display: block;
   float: left;
