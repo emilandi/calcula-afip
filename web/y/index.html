@@ -36,11 +36,10 @@
 		
 			<a href="\" class="">
 				<img src="https://lh3.googleusercontent.com/ZubI-ccfc6VbYbD6R9uN0S2p5fEpQlww8-iRbHJF2uzQDV7K2rYB_dZc_l9GVZlcK1ww4w5u5Q=w128-h128-e365" alt="">
-			</a>
-		
-			<span>
-				<h3>Calculadora de compras en el exterior</h3>
-			</span>
+			</a>			
+			
+			<h3>Calculadora de compras en el exterior</h3>			
+
 		</div>
 
 		<nav id="main">			
@@ -74,7 +73,7 @@
 			</div>
 		</div>
 
-		<div id="borde2">	</div>
+		<div class="borde2">	</div>
 	
   		<!-- <input id="get-precio" placeholder="Importe" name="Precio:" size=20> -->
      	<input id="get-precio" maxlength="8" placeholder="Importe" size="20" class="dolar">
@@ -84,39 +83,42 @@
 		<input type="text" id="total" disabled value="0">
 		<label id="lista" for="total" title="PESOS ARGENTINOS">AR$</label>		
       
-    	<div id="borde"></div>
+    	<div class="borde"></div>
   		
 		<input type="text" id="afip" disabled value="0">
 
 		<label id="lista" for="afip" title="IMPUESTO SOLIDARIO">AFIP<span class="sub">30%</span></label>
 		
-		<div id="borde"></div>  			
+		<div class="borde"></div>  			
 		
 		<input type="checkbox" name="opt1" id="optaduana" class="css-checkbox" />
         <label id="lista_aduana" for="optaduana" class="css-label" title="Solo si recibis un envio desde el exterior.">ADUANA<span class="sub">50%</span>
         </label>
 		<input type="text" for="optaduana" id="aduana" class="css-label" disabled value="0">
 		
-		<div id="borde"></div>
+		<div class="borde"></div>		
 		
-		<input type="checkbox" id="optcorreo" class="css-checkbox" />
 		
+		<input type="checkbox" id="optcorreo" class="css-checkbox" />			
 		<label id="lista_correo" for="optcorreo" class="css-label" title="TASA CORREO">
 			TASA CORREO
-		</label>
+		</label>		
+		<input type="text" for="optcorreo" id="tasa" class="css-label" disabled value="0">		
 		
-		<input type="text" for="optcorreo" id="tasa" class="css-label" disabled value="0">
 		
-		<div id="borde"></div>
+		<div class="borde"></div>
 		
 		<!-- <input type="checkbox" name="opt2" id="optfranq" class="css-checkbox" /> -->
         <!-- <label for="optfranq" class="css-label" title="Franquicia primera compra del año. ">Franquicia u$25<input type="label" id="arsfran" for="optfranq" class="css-label"> -->
         <!-- </label> -->
 		
-        <!-- <div id="borde"></div> -->
+        <!-- <div class="borde"></div> -->
     
-		<label id="lista_total" for="preciototal">TOTAL</label>
-		<input type="label" id="preciototal" disabled value="0">
+		<div class="divtotal">
+			<label id="lista_total" for="preciototal">TOTAL</label>
+			<input type="label" id="preciototal" disabled value="0">
+		</div>
+		
 
 	  <!-- <button id="btndock" value="Attach" title="Abrir esta aplicacion en ventana independiente">	</button>	 -->
 
