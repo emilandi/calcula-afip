@@ -109,7 +109,7 @@ footer a{
 
 #container{
   width: 80%;
-  height: 500px; 
+  height: 520px; 
   border: 1px solid green;
   border-radius: 10px;
   padding: 10px;
@@ -185,6 +185,7 @@ footer a{
 }
 
 #data{
+  margin-left: 5%;
   width: 90%;
   display: inline-block;  
 }
@@ -266,6 +267,7 @@ input:-moz-placeholder { color:#91c260; }
   float: left;	
   color: #fff;
   margin-bottom: 30px;
+  border-radius: 5px;
   /*background: #694 url(../img/back.gif);*/
 }
 
@@ -303,6 +305,7 @@ svg{
   width: 40%;
   margin-bottom: 0 !important;   
   margin-left: 10px; 
+  margin-top: 5px;
   /* font-size: 1.2em; */
 } 
 
@@ -316,6 +319,7 @@ svg{
   text-align: right;  
   width: 50%;
   font-size: 1.2em;
+  
   /* margin-top: -3px;   */
 }
 
