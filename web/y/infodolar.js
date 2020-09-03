@@ -111,7 +111,7 @@ function consulta () {
 	
 	getResp(url);			
 
-	console.log('Consultando URL:' + url + ' rate: ' + rate + ' sitio: ' + sitio);						
+	console.log('Consultando URL:' + url + ' rate: ' + rate + ' sitio: ' + sitio);	
 
 }
 

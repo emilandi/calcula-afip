@@ -43,13 +43,13 @@
 		</div>
 
 		<nav id="main">			
-			<a href="https://chrome.google.com/webstore/detail/calculadora-de-compras-en/jdiiofgmndfmjgmgkdogjkelfgjnicim?hl=es-419" target="_blank">
+			<a title="Chrome extension" href="https://chrome.google.com/webstore/detail/calculadora-de-compras-en/jdiiofgmndfmjgmgkdogjkelfgjnicim?hl=es-419" target="_blank">
 				<img class="iconos" src="chrome.png" alt="Chrome extension">				
 			</a>					
-			<a href="https://addons.mozilla.org/es/firefox/addon/calculadora-afip/" target="_blank">
+			<a title="Complemento para firefox" href="https://addons.mozilla.org/es/firefox/addon/calculadora-afip/" target="_blank">
 				<img class="iconos" src="firefox2.png" alt="Complemento para firefox">				
 			</a>
-			<a href="https://github.com/emilandi/calcula-afip/blob/master/win/calcula_v02.exe" target="_blank">
+			<a title="Aplicacion para escritorio" href="https://github.com/emilandi/calcula-afip/raw/master/win/calcula.exe" target="_blank">
 				<img class="iconos" src="win.png" alt="Desktop App">
 			</a>						
 
@@ -71,56 +71,53 @@
 				<div id="optrate" class="btnpanel" title="USD/EUR"></div>
 				<div id="btndark" class="btnpanel" title="MODO NOCTURNO"></div>
 			</div>
-		</div>
-
-		<div class="borde2">	</div>
+		</div>	
 	
   		<!-- <input id="get-precio" placeholder="Importe" name="Precio:" size=20> -->
-     	<input id="get-precio" maxlength="8" placeholder="Importe" size="20" class="dolar">
-	
-    	<div id="no">  </div>		
-
-		<input type="text" id="total" disabled value="0">
-		<label id="lista" for="total" title="PESOS ARGENTINOS">AR$</label>		
+     	<input id="get-precio" maxlength="8" placeholder="Importe" size="20" class="dolar">			
+		
+		
+		
+		
+		<div>			
+			<label id="lista" class="title" for="total" title="PESOS ARGENTINOS">AR$</label>	
+			<input type="text" class="values" id="total" disabled value="0">
+		</div>
+			
       
     	<div class="borde"></div>
-  		
-		<input type="text" id="afip" disabled value="0">
-
-		<label id="lista" for="afip" title="IMPUESTO SOLIDARIO">AFIP<span class="sub">30%</span></label>
+		  
+		<div>
+			<label id="lista" class="title" for="afip" title="IMPUESTO SOLIDARIO">AFIP<span class="sub">30%</span></label>		  			
+			<input type="text" class="values" id="afip" disabled value="0">
+		</div>
 		
 		<div class="borde"></div>  			
 		
-		<input type="checkbox" name="opt1" id="optaduana" class="css-checkbox" />
-        <label id="lista_aduana" for="optaduana" class="css-label" title="Solo si recibis un envio desde el exterior.">ADUANA<span class="sub">50%</span>
-        </label>
-		<input type="text" for="optaduana" id="aduana" class="css-label" disabled value="0">
+		<div>
+			<input type="checkbox" name="opt1" id="optaduana" class="css-checkbox" />
+        	<label id="lista_aduana" class="title" for="optaduana" class="css-label" title="Solo si recibis un envio desde el exterior.">ADUANA<span class="sub">50%</span>
+        	</label>
+			<input type="text" class="values" for="optaduana" id="aduana" class="css-label" disabled value="0">		
+		</div>
 		
 		<div class="borde"></div>		
 		
-		
-		<input type="checkbox" id="optcorreo" class="css-checkbox" />			
-		<label id="lista_correo" for="optcorreo" class="css-label" title="TASA CORREO">
+		<div>
+			<input type="checkbox" id="optcorreo" class="css-checkbox" />			
+			<label id="lista_correo" class="title" for="optcorreo" class="css-label" title="TASA CORREO">
 			TASA CORREO
-		</label>		
-		<input type="text" for="optcorreo" id="tasa" class="css-label" disabled value="0">		
+			</label>		
+			<input type="text" class="values" for="optcorreo" id="tasa" class="css-label" disabled value="0">				
+			
+		</div>		
 		
-		
-		<div class="borde"></div>
-		
-		<!-- <input type="checkbox" name="opt2" id="optfranq" class="css-checkbox" /> -->
-        <!-- <label for="optfranq" class="css-label" title="Franquicia primera compra del año. ">Franquicia u$25<input type="label" id="arsfran" for="optfranq" class="css-label"> -->
-        <!-- </label> -->
-		
-        <!-- <div class="borde"></div> -->
+		<div class="borde"></div>					
     
-		<div class="divtotal">
+		<div>
 			<label id="lista_total" for="preciototal">TOTAL</label>
-			<input type="label" id="preciototal" disabled value="0">
-		</div>
-		
-
-	  <!-- <button id="btndock" value="Attach" title="Abrir esta aplicacion en ventana independiente">	</button>	 -->
+			<input type="text" id="preciototal" disabled value="0">
+		</div>	  
 
 	</div>
 
@@ -129,7 +126,7 @@
 		<div id="links">			
 				<a href="https://chrome.google.com/webstore/detail/calculadora-de-compras-en/jdiiofgmndfmjgmgkdogjkelfgjnicim?hl=es-419" target="_blank">Chrome Extension</a>
 				<a href="https://addons.mozilla.org/es/firefox/addon/calculadora-afip/" target="_blank">Complemento para firefox</a>
-				<a href="https://github.com/emilandi/calcula-afip/blob/master/win/calcula_v02.exe" target="_blank">Desktop App</a>			
+				<a href="https://github.com/emilandi/calcula-afip/raw/master/win/calcula.exe" target="_blank">Desktop App</a>			
 		</div>
 		
 		<div id="repo">

@@ -47,9 +47,22 @@ function init () {
 	// 	}
 	// }); 
 
-
+	getParam();
 	consulta();
 }
+
+function getParam() {
+	var param = window.location.search;
+	console.log(param);
+	if(param){
+		var value = param.substring(3,param.length);
+		document.getElementById('get-precio').value=value
+		console.log(value);
+	}else{
+		;
+	}
+}
+
 /*
 function consulta () {
 
@@ -126,10 +139,12 @@ function fnRateChange (getRate) {
 		fnSetValues('rate','EUR');
 		fnChangeClass('get-usd','euro');
 		fnChangeClass('get-precio','euro');
+		$('#txttitulo').text('AR$ = 1 EUR');
 	}else{			
 		fnSetValues('rate','USD');						
 		fnChangeClass('get-usd','dolar');		
 		fnChangeClass('get-precio','dolar');		
+		$('#txttitulo').text('AR$ = 1 USD');
 	};	
 	consulta();
 }
