@@ -94,6 +94,7 @@ function datos (resp) {
 		
 		// $('#loading').fadeOut();
 		document.getElementById('loading').style.display='none';
+		calcula();
 		return rate;			
 		
 	}

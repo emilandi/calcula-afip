@@ -48,7 +48,7 @@ function init () {
 	// }); 
 
 	getParam();
-	consulta();
+	consulta();	
 }
 
 function getParam() {
@@ -61,6 +61,7 @@ function getParam() {
 	}else{
 		;
 	}
+	calcula();	
 }
 
 /*
