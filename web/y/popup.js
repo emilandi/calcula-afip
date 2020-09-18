@@ -38,15 +38,6 @@ function init () {
 
 	fnSetValues('sitio',1);
 
-	//conext
-	// chrome.runtime.sendMessage({action: "context" },function (response) {
-	// 	console.log('enviando peticion: context');		
-	// 	console.log('respuesta: ' + response);		
-	// 	if(response){
-	// 		document.getElementById('get-precio').value=response;
-	// 	}
-	// }); 
-
 	getParam();
 	consulta();	
 }
