@@ -1,4 +1,7 @@
 
+div,input,label {
+  /* border: solid !important; */
+}
 
 h3{
   font-size: 1.4em !important;   
@@ -7,29 +10,14 @@ h3{
   top:30px;  
 }
 
-#main{
-  margin-top: 20px;
-  margin-left: 10px;
-  display: block;  
-  float: right;
-  margin-top: 20px;
-  margin-right:10%;
-}
-
-.iconos{
-  width: 30px;
-  margin-left: 20px;
-}
-
-#logo{  
-  margin-left: 10%;
-  margin-top: 20px;
-  display: inline-block;  
-  border-radius: 20px;  
-}
-
-#logo img {
-  width: 60px;
+body {
+  background: #fdfcfb;
+  font-size: 0.9em;
+  font-family: 'PT Mono';
+  color: #222; 
+  width:100%;
+  margin: 0 !important;  
+  overflow-x: hidden;
 }
 
 footer{
@@ -53,6 +41,30 @@ a{
   text-decoration: none !important;
 }
 
+label {
+  margin: 0 !important;
+}
+
+#main{
+  margin-top: 20px;
+  margin-left: 10px;
+  display: block;  
+  float: right;
+  margin-top: 20px;
+  margin-right:10%;
+}
+
+#logo{  
+  margin-left: 10%;
+  margin-top: 20px;
+  display: inline-block;  
+  border-radius: 20px;  
+}
+
+#logo img {
+  width: 60px;
+}
+
 #repo{
   display: block;   
   margin: 10px; 
@@ -62,16 +74,6 @@ a{
 
 #links{
   display: block;
-}
-
-body {
-  background: #fdfcfb;
-  font-size: 0.9em;
-  font-family: 'PT Mono';
-  color: #222; 
-  width:100%;
-  margin: 0 !important;  
-  overflow-x: hidden;
 }
 
 #links{  
@@ -84,19 +86,16 @@ footer a{
   padding: 20px;
 }
 
-#container{
-  width: 80%;
-  height: 550px;   
+#container{  
   border: 1px solid green;
   border-radius: 10px;
   padding: 10px;
-  margin-left: 30%;
-  margin-top: 10px;
-  padding-bottom: 80px; 
-  max-width: 40%;
-  min-width: 400px;
-  margin-bottom: 100px;
+  margin-left: 30%;  
   margin-top: 40px;
+  padding-bottom: 80px; 
+  max-width: 35%;
+  min-width: 350px; 
+  margin-bottom: 100px;  
 }
 
 #loading{  
@@ -110,23 +109,12 @@ footer a{
 }
 
 #edit{   
-    background: url(../img/edit.gif) no-repeat;
-    /* margin: -5px 0px 0px 85%;
-    position: absolute;     */
+    background: url('/img/edit.gif') no-repeat;   
 }
 
-#optrate{
-  /*background: url('../img/change16.png') no-repeat; */
-  background: url('../img/usdtoeur1.jpeg') no-repeat; 
+#optrate{ 
+  background: url('/img/eurousd321.png') no-repeat; 
   cursor: pointer;
-  /* margin: 25px 10px 10px 85%;
-  position: absolute; */
-
-/*  width: 30px;
-  height:30px; 
-  cursor: pointer;  
-  margin: 20px 10px 10px 302px;
-  position: absolute;*/
 }
 
 #btndark{  
@@ -134,33 +122,33 @@ footer a{
   height: 25px;
   background: url('../img/Antu_contrast.svg') no-repeat;
   display: none;
-  /* //background: url('../img/dark.svg') no-repeat;   
-  //position: absolute; */
-}
+}  
 
 .btnpanel{
   cursor: pointer;
-  height: 20px;
-  width: 20px;
-  margin-left: 5px;
+  height: 25px;
+  width: 25px;
+  margin-left: 0;
   margin-top: 5px;
   margin-bottom: 5px;
   display: block;
+  background-size: 25px !important;
+}
+
+.iconos{
+  width: 30px;
+  margin-left: 20px;
 }
 
 #panel{
-  /* display: inline-block;    
-  position: relative;
-  margin-left: 0px;
-  margin-top: 5px;  
-  width: 10%; */
-
-  float: right;
+  width: 8%;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 #data{
   margin-left: 5%;
-  width: 90%;
+  width: 85%;
   display: inline-block;  
 }
 
@@ -168,29 +156,12 @@ footer a{
   margin-top: 30px;
 }
 
-/* #contenedor{
-  float: left;
-  margin: 20px 20px 0px 20px;
-  width: 90%;  
-} */
-
-/* #no{
-  float: left;
-  margin-top: 10px;
-  width: 100%;  
-} */
-
-
-
 #get-usd{
   background: none;
   font-family: 'Dosis', sans-serif;
   letter-spacing: 3px;
-  font-weight: 400;
-  /* margin: 0px 0px 0px 60px; */
-  height: 48px;
-  /* float: right; */
-  /*width: 280px;*/
+  font-weight: 400;  
+  height: 48px;  
   width: 100%;
   font-size: 2.3em;
   text-align: center;
@@ -209,8 +180,8 @@ footer a{
 }
 
 #edit:hover{
-    background: url(../img/edit.gif) no-repeat;
-    background-position: 0 -20px;
+    background: url(../img/edit.gif) no-repeat;    
+    background-position: 0 -32px;
 }
 
 input {
@@ -237,20 +208,17 @@ input:-moz-placeholder { color:#91c260; }
   width: 100%;
   height: 50px;
   padding: 0 20px 0 20px;
-  margin-top: 20px;
-  /* float: left;	 */
+  margin-top: 20px;  
   color: #fff;
   margin-bottom: 30px;
-  border-radius: 5px;
-  /*background: #694 url(../img/back.gif);*/
+  border-radius: 5px;    
 }
 
 svg{
   fill: currentColor;
 }
 
-.dolar{
-  /*color: #fff;*/
+.dolar{  
   color: #439a3b;
   background: #694 url(../img/back.gif);    
 }
@@ -258,66 +226,52 @@ svg{
 .icon{
   width: 200px;  
 }
+
 .euro{    
     background: #694 url(../img/back_01.gif);  
-    color: #fff;
-    /*color: #65469b;*/
+    color: #fff;  
     color: #394089;
 }
 
 .dark{
   background-color: #1f202d;
-  /* color: #ffffffe0;
-  color:  #999  ; */
+  color:  #999  ; 
   color: #333;  
 }
 
-/*  
-#lista, #lista_aduana, #lista_correo, #lista_total{
-  float: left; 
-  height: 14px;
-  font-size: 1em; 
-  width: 40%;
-  margin-bottom: 0 !important;   
-  margin-left: 10px; 
-  margin-top: 5px;
-  font-size: 1.2em;
-}  */
+.title{
+  max-width: 150px;
+}
 
-/* #lista_aduana,#lista_correo{  
-  padding-top: 1px;
-  margin-top: 8px;
-} */
+.item{
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+}
 
-/* #total, #afip, #aduana,#tasa,#total,#optaduana{
+.data{
   float: right;
   text-align: right;  
-  width: 50%;
+  max-width: 150px;
   font-size: 1.2em;  
-  margin-top: -3px;  
-} */
+  max-height: 25px;
+}
 
 .values{
   width: 30%;
   float: right;
-  text-align: right;
-  /* border: 1px solid; */
+  text-align: right;  
 }
 
 #lista_total{
   float: left;    
+  font-size: 1em;
+  padding-top: 8px;
 }
 
 #preciototal{
   float: right;
 }
-
-
-.title{
-  width: 40%;
-  float: left;
-}
-
 
 input[type=checkbox] {
   display:none;
@@ -335,14 +289,10 @@ input[type=checkbox] + label {
 }
 
 input[type=checkbox]:checked + label {
-  background:url("img/check.png") no-repeat;
-  /* height: 32px; */
+  background:url("img/check.png") no-repeat;  
   width: 200px;
-  display:inline-block;
-  /* background-size: 50%; */
-  
-  padding-left: 25px;
-  
+  display:inline-block;  
+  padding-left: 25px;  
   background-size: 16px;
   background-position: left; 
   background-repeat: no-repeat;
@@ -351,12 +301,6 @@ input[type=checkbox]:checked + label {
 #lista_aduana,#lista_correo{
   cursor: pointer;
 }
-
-
-/* #divtotal{
-  margin-bottom: 100px;
-  display: block;
-} */
 
 .css-label{
   margin-bottom: 4px;
@@ -373,42 +317,24 @@ a{
   text-decoration: none;  
 }
 
-
-/* #lista_aduana{
-   width: 100%; 
-} */
-
-/* #aduana{
-margin:0px 0px 0px 0px;
-} */
-
-/* #tasa{
-	width:50px;
-	margin-left:60px;
-	text-align: right;
-} */
-
-/* #lista_total{
-  margin-top: 10px;
-  height: 30px;
-} */
-
 .sub{
   font-size: 0.6em;
   vertical-align: 3px;
 }
 
 #preciototal{
-  margin: -6px 0 5px 0;
-  font-size: 2em;
-  width: 200px;
-  float: right;
-  text-align: right; 
+  /* width: 200px; */
+  /* float: right; */
+  /* margin: -6px 0 5px 0; */
+  font-size: 1.6em;   
+  text-align: right;
+  max-width: 190px;
 }
 
 .borde{
-  margin: 0 0 26 0;
-  display: block;
+  /* margin: 0 0 26 0; */
+  margin: 0 0 10 0;
+  display: block;  
   float: left;
   width: 100%;
   border-top: 1px dashed #999;
@@ -417,10 +343,6 @@ margin:0px 0px 0px 0px;
 cursor{
 	color:white;
 }
-
-/*#get-precio:hover{
-	cursor:white;
-}*/
 
 #btndock{
   display: block;
@@ -436,4 +358,181 @@ cursor{
 }
 #btndock:hover{
   background-position: 0 -27px;
+}
+
+
+/* ocultar flechas input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+@media screen and (max-width: 400px) {
+
+div,input,label{
+  /* border: solid; */
+}
+
+  footer{ 
+    position: absolute;
+    bottom: 0; 
+    display: none !important;
+  }
+
+  header{
+    /* height: 10%; */
+  }
+
+  .item{
+    /* margin-top: 0.5em; */
+    margin: 0 !important;
+  }
+
+  .data{
+    max-height: 30px !important;
+    font-size: 1.8em; 
+    text-align: right !important;
+    max-width: 50% !important; 
+  }
+
+  .title{
+    font-size: 1.3em;
+    width: 50% !important; 
+    /* max-width: 50% !important; */
+    max-height: 30px !important;    
+  }
+
+  #container{
+    height: 70%; 
+    max-width: 100%;         
+    margin-top : 3% !important;
+    margin-left:2% !important;         
+    min-width: 80px;
+    width: 96% !important;
+    border: none;    
+    /* max-height: 90% !important; */
+  }
+
+  #data{
+    padding-top: 10px;
+  }
+
+  #logo{
+    margin-left: 10px;
+  }
+
+  h3{
+    margin: 70px;
+    width: 70%;
+  }
+
+  #get-precio{    
+    padding: 1em;    
+    margin: 0 !important;
+    font-size: 2em;
+    margin-bottom: 25px !important;
+  }
+
+  #loading{
+    background-size: 4em;
+    height: 4em !important;
+    width:  4em !important; 
+    margin-left: 35% !important;
+    margin-top: 20px !important;
+  }
+
+
+
+  .btnpanel{
+    background-size: 32px !important;
+    width: 32px;
+    height: 32px;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  #lista_total,#preciototal{
+    font-size: 1.8em !important;
+    padding: 0 !important;
+  }
+
+  #preciototal{
+    text-align: right;
+    max-width: 70%;
+  }
+
+  #get-usd{
+    font-size: 3em;
+    /* height: 1em; */
+  }
+
+  #front{
+    height: 30%;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .borde{
+    margin-top: 10px !important;
+  }
+
+  #panel{        
+    width: 10%;    
+    float: right;
+  }
+
+  #txttitulo{
+    font-size: 1em;
+  }
+
+  input[type=checkbox] {
+    display:none;
+  }
+
+  input[type=checkbox] + label {
+    display:inline-block; 
+    background:url("img/nocheck.png") no-repeat; 
+    width: 200px;
+    background-size: 0.8em;
+    background-position: left;
+    padding-left: 1em;
+    max-width: 180px;
+  }
+
+  span{
+    padding-left: 0.5em;
+  }
+
+  nav{
+    display: none !important;
+  }
+
+  #logo{
+    /* margin: 3%; */
+  }
+
+  img{
+    /* width: 128px !important;
+    height: 128px !important;
+    margin: 0 !important; */
+  }
+
+  input[type=checkbox]:checked + label {
+    background:url("img/check.png") no-repeat;  
+    width: 200px;
+    display:inline-block;  
+    padding-left: 1em;
+    background-size: 0.8em;
+    background-position: left; 
+    background-repeat: no-repeat;
+  }
+
 }

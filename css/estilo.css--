@@ -25,19 +25,32 @@ body {
 }
 
 #edit{   
-    background: url(../img/edit.gif) no-repeat; 
+    background: url(../img/edit.gif) no-repeat;
+    /* margin: -5px 0px 0px 85%;
+    position: absolute;     */
 }
 
 #optrate{
+  /*background: url('../img/change16.png') no-repeat; */
   background: url('../img/usdtoeur1.jpeg') no-repeat; 
+  cursor: pointer;
+  /* margin: 25px 10px 10px 85%;
+  position: absolute; */
+
+/*  width: 30px;
+  height:30px; 
   cursor: pointer;  
+  margin: 20px 10px 10px 302px;
+  position: absolute;*/
 }
 
 #btndark{  
   width: 25px;
   height: 25px;
   background: url('../img/Antu_contrast.svg') no-repeat;
-  display: none; 
+  display: none;
+  /* //background: url('../img/dark.svg') no-repeat;   
+  //position: absolute; */
 }
 
 .btnpanel{
@@ -86,10 +99,6 @@ body {
   text-align: center;
 }
 
-div,label,input {
-  /* border: solid !important; */
-}
-
 #txttitulo{
   letter-spacing: 5px;
   float: left;
@@ -110,15 +119,6 @@ input {
     font-family: 'PT Mono';
     background: none;
     border: 0;
-}
-
-.data{
-  float: right;
-  text-align: right;  
-  max-width: 150px;
-  font-size: 1.2em;
-  /* margin-top: -3px; */
-  /* border: solid; */
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -167,12 +167,12 @@ input:-moz-placeholder { color:#91c260; }
 }
 
 #lista, #lista_aduana,#lista_correo, #lista_total{
-  /* float: left;
+  float: left;
   height: 14px;
-  font-size: 1em;  
+  font-size: 1em;
+  width: 100%;
   margin-bottom: 4px;
   margin-right:10px;
-  width: 45% !important; */
 }
 
 .css-label{
@@ -184,7 +184,7 @@ input:-moz-placeholder { color:#91c260; }
 } */
 
 #aduana, #tasa {
-  /* margin-right: 18px; */
+  margin-right: 18px;
 }
 
 /* #tasa{
@@ -204,37 +204,34 @@ input:-moz-placeholder { color:#91c260; }
 }
 
 #total, #afip,#afip35, #aduana,#tasa, #preciototal,#optaduana{
-  /* float: right;
+  float: right;
   text-align: right;  
   width: 150px;
   font-size: 1.2em;
-  margin-top: -3px; */
+  margin-top: -3px;
 }
 
 #preciototal{
-  float: right;
-  text-align: right;
   margin: -6px 0 5px 0;
-  font-size: 1.8em;    
-  width: 60%;
+  font-size: 2em;
+  width:250px;
 }
 
-.item{
-
-}
-
-.borde{
-  margin: 0 0 26 0;
-  display: block;
-  float: left;
-  width: 100%;
-  border-top: 1px dashed #999;
+#borde{
+margin: 0 0 26 0;
+display: block;
+float: left;
+width: 100%;
+border-top: 1px dashed #999;
 }
 
 cursor{
 	color:white;
 }
 
+/*#get-precio:hover{
+	cursor:white;
+}*/
 
 #btndock{
   display: block;
@@ -251,7 +248,3 @@ cursor{
 #btndock:hover{
   background-position: 0 -27px;
 }
-
-/*#get-precio:hover{
-	cursor:white;
-}*/

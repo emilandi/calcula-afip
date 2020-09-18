@@ -2,18 +2,25 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
 
 	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Dosis:400,500,600|Lora' rel='stylesheet' type='text/css'>
-
 	
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 	<script	src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="jquery.min.js"></script>	    
+	
 	<script src="popup.js"></script>
 	<script src="infodolar.js"></script> 	
 
-	<link href="estilo.css" rel="stylesheet" type="text/css">
-	<link href="check.css" rel="stylesheet" type="text/css">		
+	<link href="estilo.css" rel="stylesheet" type="text/css">	
+	<link href="check.css" rel="stylesheet" type="text/css">			
+	<link href="mobile.css" rel="stylesheet" type="text/css">			
 	
 	<title>Calculadora de compras en el exterior</title>
 	<link rel="icon" type="image/png"  href="favicon.png">
@@ -21,12 +28,8 @@
 	<link rel="icon" type="image/png" href="favicon.png">
 	
 	<!-- CSS only -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-	<!-- JS, Popper.js, and jQuery -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">	
+	
 
 </head>
 
@@ -64,7 +67,7 @@
 		
 		<div id="front">
 			<div id="data">
-				<input id="get-usd" min="0" name="usd" disabled value="" size="20">
+				<input type="number" id="get-usd" min="0" name="usd" disabled value="123" size="20" autocomplete="off">
 				<label id="txttitulo">AR$ = 1 U$D</label> 		
 			</div>
 
@@ -75,36 +78,41 @@
 			</div>
 		</div>		
   	
-     	<input id="get-precio" maxlength="8" placeholder="Importe" size="20" class="dolar">			
+     	<input type="number" id="get-precio" maxlength="8" placeholder="Importe" size="20" class="dolar" autocomplete="off">			
 		
-		<div>			
-			<label id="lista" class="title" for="total" title="PESOS ARGENTINOS">AR$</label>	
-			<input type="text" class="values" id="total" disabled value="0">
+		<div class="item">			
+			<label class="title" for="total" title="PESOS ARGENTINOS">AR$</label>	
+			<input type="text" class="data" id="total" disabled value="0">
 		</div>			
       
     	<div class="borde"></div>
 		  
-		<div>
-			<label id="lista" class="title" for="afip" title="IMPUESTO SOLIDARIO">AFIP<span class="sub">30%</span></label>		  			
-			<input type="text" class="values" id="afip" disabled value="0">
+		<div class="item">
+			<label class="title" for="afip" title="IMPUESTO SOLIDARIO">IMP.PAIS<span class="sub">30%</span></label>		  			
+			<input type="text" class="data" id="afip" disabled value="0">
 		</div>
+
+		<div class="item">
+			<label class = "title" for="afip35" title="PERCEPCION DE GANANCIAS 35%">AFIP<span class="sub">35%</span></label>	  		
+			<input type="text" class="data" id="afip35" disabled value="0">		
+		</div>	
 		
 		<div class="borde"></div>  			
 		
-		<div>
+		<div class="item">
 			<input type="checkbox" name="opt1" id="optaduana" class="css-checkbox" />
         	<label id="lista_aduana" class="title" for="optaduana" class="css-label" title="Solo si recibis un envio desde el exterior.">
 				ADUANA<span class="sub">50%</span>
         	</label>
-			<input type="text" class="values" for="optaduana" id="aduana" class="css-label" disabled value="0">		
+			<input type="text" class="data" for="optaduana" id="aduana" class="css-label" disabled value="0">		
 		</div>
 		
-		<div class="borde"></div>		
+		<!-- <div class="borde"></div>		 -->
 		
-		<div>
+		<div class="item">
 			<input type="checkbox" id="optcorreo" class="css-checkbox" />			
 			<label id="lista_correo" class="title" for="optcorreo" class="css-label" title="TASA CORREO">TASA CORREO</label>		
-			<input type="text" class="values" for="optcorreo" id="tasa" class="css-label" disabled value="0">							
+			<input type="text" class="data" for="optcorreo" id="tasa" class="css-label" disabled value="0">							
 		</div>		
 		
 		<div class="borde"></div>					

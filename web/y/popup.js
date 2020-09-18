@@ -183,7 +183,8 @@ function calcula () {
 	var precio = document.getElementById("get-precio").value;	//importe de la compra en usd		
 	var preciousd=(usd * precio); // usd to ars importe de la compra
 	
-	
+	var afip35  = parseFloat(preciousd) * 0.35;
+
 	//impuesto aduanero
 	var aduana = fnaduana(usd,precio); 
 	
@@ -193,10 +194,11 @@ function calcula () {
 	//TASA CORREO(140pe)
 	var tasa = fntasa();		
 	
-	var total = parseFloat(preciousd) + parseFloat(afip) + parseFloat (aduana) + parseFloat(tasa);
+	var total = parseFloat(preciousd) + parseFloat(afip) + parseFloat(afip35) +  parseFloat (aduana) + parseFloat(tasa);
 
 	//mostrar datos 
-	document.getElementById("afip").value=afip;		
+	document.getElementById("afip").value=fixvalues(afip);		
+	document.getElementById("afip35").value=fixvalues(afip35);		
 	document.getElementById('tasa').value=fixvalues(tasa);
 	document.getElementById("aduana").value=fixvalues(aduana);
 	document.getElementById("total").value=fixvalues(preciousd);	

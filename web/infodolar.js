@@ -91,9 +91,21 @@ function datos (resp) {
 		document.getElementById('get-usd').value=rate;
 		document.getElementById('get-precio').placeholder='';
 		
-		
-		// $('#loading').fadeOut();
-		document.getElementById('loading').style.display='none';
+		$("#loading").fadeOut("slow");
+
+		// $("#loading").fadeOut(600, function (){
+
+		// })
+
+
+		// $("#loading").fadeOut(600, function () {					
+			// $("#get-usd").hide().fadeIn(300).val(rate);						
+			// $("#txttitulo").hide().fadeIn(300).text(txt);												
+			// $('#get-precio').attr('placeholder','Importe');									
+			// $("#get-precio").focus();			
+		// });	
+			
+		// document.getElementById('loading').style.display='none';
 		calcula();
 		return rate;			
 		

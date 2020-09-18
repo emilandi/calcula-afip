@@ -9,6 +9,9 @@ function init () {
 	$('#get-usd').val('');
 	$('#get-precio').attr('placeholder','loading...');	
 	
+	// $("#get-usd").val('75.12');
+	// $("#get-precio").val('100');
+
 	// get value rate USD/EUR;
 	getRate = fnGetValues('rate');      
 
@@ -171,34 +174,41 @@ function calcula () {
 
 	var usd = document.getElementById("get-usd").value; //cotizacion del dolar
 	var precio = document.getElementById("get-precio").value;	//importe de la compra en usd		
-	var preciousd=(usd * precio); // usd to ars importe de la compra
+	var preciousd=(usd * precio); // usd to ars importe de la compra	
 	
-	
-	//impuesto aduanero
+	//Impuesto aduanero
 	var aduana = fnaduana(usd,precio); 
 	
-	//calcula AFIP / impuesto solidario
+	//AFIP / impuesto solidario
 	var afip = fnafip(preciousd);		
+	var afip35 = parseFloat(preciousd * 0.35)
 	
 	//TASA CORREO(140pe)
-	var tasa = fntasa();		
+	var tasa = fntasa();			
 	
-	var total = parseFloat(preciousd) + parseFloat(afip) + parseFloat (aduana) + parseFloat(tasa);
+	//TOTAL
+	var total = parseFloat(preciousd) + parseFloat(afip) + parseFloat(afip35) + parseFloat (aduana) + parseFloat(tasa);	
 
+	mostrar(afip,tasa,aduana,preciousd,total,afip35);
+		
+}
+
+function mostrar(afip,tasa,aduana,preciousd,total,afip35) {
 	//mostrar datos 
 	document.getElementById("afip").value=afip;		
 	document.getElementById('tasa').value=fixvalues(tasa);
 	document.getElementById("aduana").value=fixvalues(aduana);
 	document.getElementById("total").value=fixvalues(preciousd);	
-	document.getElementById("preciototal").value=fixvalues(total);
+	document.getElementById("preciototal").value=fixvalues(total);	
+	document.getElementById("afip35").value=fixvalues(afip35);
 
 	console.log('----------------------------------')		
 	console.log('Precio ARS: ' + usd);
 	console.log('Aduana: ' + aduana);	
-	console.log('AFIP: ' + afip);
+	console.log('AFIP 30%: ' + afip);
+	console.log('AFIP 35%: ' + afip35);
 	console.log('Correo: ' + tasa);		
-	console.log('Total General: ' + total);
-		
+	console.log('Total General: ' + total);	
 }
 
 //eventos
