@@ -5,12 +5,13 @@ $(document).ready(init);
 
 function init () {
 	console.log('ready');
+	console.log('v.1');
 	
 	$('#get-usd').val('');
 	$('#get-precio').attr('placeholder','loading...');	
 	
 	// get value rate USD/EUR;
-	getRate = fnGetValues('rate');      
+	getRate = fnGetValues('rate');  
 
 	if (getRate != 'USD' && getRate != 'EUR' ) {		
 		console.log('Rate = ' + getRate + '..error');
@@ -47,10 +48,10 @@ function getParam() {
 	console.log(param);
 	if(param){
 		var value = param.substring(3,param.length);
-		document.getElementById('get-precio').value=value
+		document.getElementById('get-precio').value=value;
 		console.log(value);
 	}else{
-		;
+		
 	}
 	calcula();	
 }
@@ -186,7 +187,7 @@ function calcula () {
 	var tasa = fntasa();		
 	
 	var total = parseFloat(preciousd) + parseFloat(afip) + parseFloat(afip35) +  parseFloat (aduana) + parseFloat(tasa);
-
+	
 	//mostrar datos 
 	document.getElementById("afip").value=fixvalues(afip);		
 	document.getElementById("afip35").value=fixvalues(afip35);		
@@ -194,6 +195,8 @@ function calcula () {
 	document.getElementById("aduana").value=fixvalues(aduana);
 	document.getElementById("total").value=fixvalues(preciousd);	
 	document.getElementById("preciototal").value=fixvalues(total);
+	
+	document.getElementById("total2").innerText='ARS: ' + fixvalues(total);
 
 	console.log('----------------------------------')		
 	console.log('Precio ARS: ' + usd);
@@ -290,6 +293,18 @@ document.addEventListener('DOMContentLoaded', function() {
 			fnSetValues('mode','dark');			
 		}
 	}	
+
+	document.getElementById('wp').addEventListener('click',function(){
+		var value = document.getElementById('get-precio').value;
+		if(value){
+			var url = 'https://api.whatsapp.com/send?text=https://calcula-afip.web.app/?=v' + value;
+			this.href = url;
+		}else{
+			alert('Ingrese un importe valido ');
+			$('#get-precio').focus();
+		}	
+
+	})
 	
 });
 

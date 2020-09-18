@@ -1,83 +1,199 @@
-/* ----------- Galaxy S3 ----------- */
+@media screen and (max-width: 400px) {
 
-/* Portrait and Landscape */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) {
+  header{    
+    top: 0 !important;
+    margin: 0 !important;
+    height: 100px !important;
+  }
 
-}
+  body{
+    overflow: auto;
+  }
 
-/* Portrait */
-@media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) 
-  and (orientation: portrait) {
+  footer{ 
+    position: absolute;
+    bottom: 0; 
+    display: none !important;
+  }
 
-}
 
-/* Landscape */
-@media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) 
-  and (orientation: landscape) {
+  .item{    
+    margin: 0 !important;   
+  }  
 
-}
+  .data{
+    max-height: 30px !important;
+    font-size: 1.1em !important; 
+    text-align: right !important;
+    max-width: 50% !important; 
+  }
 
-/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+  .title{
+    font-size: 1.2em;        
+    max-height: 30px !important;    
+  }
 
-/* Portrait and Landscape */
-@media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) {
+  #lista_aduana{
+    max-width: 45% !important;
+  }
 
-}
+  #container{
+    height: 80%;     
+    max-width: 100%;         
+    margin-top : 3% !important;
+    margin-left:1% !important;         
+    min-width: 80px;
+    width: 96% !important;
+    border: none; 
+    /* max-height: 90% !important; */
+  }
 
-/* Portrait */
-@media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) 
-  and (orientation: portrait) {
+  #data{
+    padding-top: 10px;
+  }
 
-}
+  #detalle{
+    margin-top: 0px;
+  }
 
-/* Landscape */
-@media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) 
-  and (orientation: landscape) {
+  #logo{    
+    
+  }
+  
+  h3{       
+    font-size: 1.2em !important;
+    margin-left: 60px !important;
+  }
 
-}
+  #get-precio{    
+    padding: 1em;    
+    margin: 0 !important;
+    font-size: 2em;
+    margin-bottom: 15px !important;
+  }
 
-/* ----------- Galaxy S6 ----------- */
+  #loading{
+    background-size: 4em;
+    height: 4em !important;
+    width:  4em !important; 
+    margin-left: 35% !important;
+    margin-top: 20px !important;
+  }
 
-/* Portrait and Landscape */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) {
+  .btnpanel{
+    background-size: 32px !important;
+    width: 32px;
+    height: 32px;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+  }
 
-}
+  #lista_total,#preciototal{
+    font-size: 1.8em !important;
+    padding: 0 !important;
+    display: none;
+  }
 
-/* Portrait */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
-  and (orientation: portrait) {
+  #tasa{
+    max-width: 25% !important;
+  }
 
-}
+  #preciototal{
+    text-align: right;
+    max-width: 65%;
+  }
 
-/* Landscape */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
-  and (orientation: landscape) {
+  #get-usd{
+    font-size: 3em;
+    /* height: 1em; */
+  }
+
+  #front{
+    height: 30%;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .borde{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  #panel{        
+    width: 10%;    
+    float: right;
+  }
+
+  #txttitulo{
+    font-size: 1em;
+  }
+
+  input[type=checkbox] {
+    display:none;
+  }
+
+  input[type=checkbox] + label {
+    display:inline-block; 
+    background:url("img/nocheck.png") no-repeat; 
+    width: 200px;
+    background-size: 0.8em;
+    background-position: left;
+    padding-left: 1em;
+    max-width: 180px;
+  }
+
+  span{
+    padding-left: 0.5em;
+  }
+
+  nav{
+    display: none !important;
+  }
+  
+  img{
+    /* width: 128px !important;
+    height: 128px !important;
+    margin: 0 !important; */
+  }
+
+  input[type=checkbox]:checked + label {
+    background:url("img/check.png") no-repeat;  
+    width: 200px;
+    display:inline-block;  
+    padding-left: 1em;
+    background-size: 0.8em;
+    background-position: left; 
+    background-repeat: no-repeat;
+  }
+
+  #lista_correo {
+    width: 70% !important;   
+    padding-top: 1px;
+  }
+
+  #total2{
+    width: 100%;
+    font-size: 2em;    
+    padding: 10px;
+    text-align: center;
+    margin: 0 !important;    
+    display: block;
+    /* border: solid; */
+    margin-bottom: 20px !important;    
+  }
+
+  #share{
+    margin-top: 70px !important;
+    margin-bottom: 50px !important;  
+    display: block;    
+  }
+
+  #share a{
+    color:blue;
+  }
+
+    #wp{
+      margin-left: 15px !important;
+    }
 
 }
