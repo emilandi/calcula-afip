@@ -11,6 +11,10 @@ https://www.dolarsi.com/api/api.php?type=euro
 https://www.dolarsi.com/api/api.php?type=valoresprincipales
 */
 
+//http://contenidos.lanacion.com.ar/json/dolar
+//https://api.bluelytics.com.ar/json/last_price
+//http://ws.geeklab.com.ar/dolar/get-dolar-json.php
+
 var url;
 var tipo;
 var json;
