@@ -55,46 +55,53 @@
 			<input type="text" class="data"  id="total" disabled value="0">
 		</div>  		
       
-      	<div class="borde"></div>  		
-	
-		<div class="item">
-			<label for="afip" title="IMPUESTO SOLIDARIO">PAIS<span class="sub">30%</span></label>
-			<input type="text" class="data" id="afip" disabled value="0">  			
-		</div>	
-		
-		<div class="borde"></div>
+      	<div class="borde"></div>	
 
-		<div class="item">
-			<label for="afip35" title="PERCEPCION DE GANANCIAS 35%">AFIP<span class="sub">35%</span></label>	  		
-			<input type="text" class="data" id="afip35" disabled value="0">		
-		</div>		
+		<div id="taxes">
+			<div class="item">
+				<label for="afip"  class="title" title="IMPUESTO SOLIDARIO">PAIS<span class="sub">30%</span></label>
+				<input type="text" class="data" id="afip" disabled value="0">  			
+			</div>	
+		
+			<!-- <div class="borde"></div> -->
+
+			<div class="item">
+				<label for="afip35" class="title" title="PERCEPCION DE GANANCIAS">AFIP<span class="sub">35%</span></label>	  		
+				<input type="text" class="data" id="afip35" disabled value="0">		
+			</div>	
+		</div>			
 
 		<div class="borde"></div>  	
 	  
-		<div class="item">
-			<input type="checkbox" name="opt1" id="optaduana" class="css-checkbox" />
-			<label id="lista_aduana" for="optaduana" class="css-label" title="Solo si recibis un envio desde el exterior.">ADUANA<span class="sub">50%</span></label>
-			<input type="label" class="data" for="optaduana" id="aduana" class="css-label" disabled value="0">
-		</div>		
+		<div id="exterior">
+			
+			<div class="item">
+				<input type="checkbox" name="opt1" id="optaduana" class="css-checkbox" />
+				<label id="lista_aduana" for="optaduana" class="css-label" title="Solo si recibis un envio desde el exterior.">ADUANA<span class="sub">50%</span></label>
+				<input type="label" class="data" for="optaduana" id="aduana" class="css-label" disabled value="0">
+			</div>		
+			
+			<!-- <div class="borde"></div> -->
+			
+			<div class="item">
+				<input type="checkbox" id="optcorreo" class="css-checkbox" />		
+				<label id="lista_correo" for="optcorreo" class="css-label" title="TASA CORREO">TASA CORREO</label>
+				<input type="label" class="data" for="optcorreo" id="tasa" class="css-label" disabled value="0">
+			</div>	
 		
-		<div class="borde"></div>
-		
-		<div class="item">
-			<input type="checkbox" id="optcorreo" class="css-checkbox" />		
-			<label id="lista_correo" for="optcorreo" class="css-label" title="TASA CORREO">TASA CORREO</label>
-			<input type="label" class="data" for="optcorreo" id="tasa" class="css-label" disabled value="0">
-		</div>	
+		</div>
+
 		
 		<div class="borde"></div>					
 		
 		<!-- TOTAL -->
-		<div class="item">
+		<div id="divtotal" class="item">			
 			<label id="lista_total" for="preciototal">TOTAL</label>
-			<input type="label" id="preciototal" disabled value="0">
+			<input type="label" id="preciototal" disabled>
 		</div>
 	
 	</div>
-	
+		
 
 </form>
 </div>

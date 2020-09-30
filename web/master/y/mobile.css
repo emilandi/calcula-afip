@@ -183,13 +183,17 @@
   }
 
   #share{
-    margin-top: 70px !important;
-    margin-bottom: 50px !important;  
-    display: block;    
+    /* margin-top: 70px !important; */
+    /* margin-bottom: 50px !important;   */
+    padding-top: 10px;
+    padding-bottom: 50px;
+    display: block;      
+    /* position: absolute;      */
   }
 
   #share a{
     color:blue;
+    margin: 0 !important;
   }
 
     #wp{

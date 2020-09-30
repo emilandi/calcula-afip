@@ -204,6 +204,18 @@ function calcula () {
 	console.log('AFIP: ' + afip);
 	console.log('Correo: ' + tasa);		
 	console.log('Total General: ' + total);
+	
+	if(total > 0 ){
+		$([document.documentElement, document.body]).animate({
+			scrollTop: $("#get-precio").offset().top
+		}, 400);	
+	}
+	else{
+		$([document.documentElement, document.body]).animate({
+			scrollTop: $(document.body).offset().top
+		}, 300);
+	}
+	
 		
 }
 
@@ -305,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}	
 
 	})
-	
+		
 });
 
 //verificar estado del check para calcular true=aduana

@@ -176,20 +176,37 @@ function calcula () {
 	var precio = document.getElementById("get-precio").value;	//importe de la compra en usd		
 	var preciousd=(usd * precio); // usd to ars importe de la compra	
 	
-	//Impuesto aduanero
-	var aduana = fnaduana(usd,precio); 
+	if (preciousd==0 || preciousd==null) {		
+		// $('.data').hide();
+		// $('#preciototal').hide();
+		$('.data').fadeOut(200);
+		$('#preciototal').fadeOut(200);			
+			
+	}else{
+		
+		// $('.data').show();		
+		// $('#preciototal').show();
+		
+		$('.data').fadeIn(300);
+		$('#preciototal').fadeIn(300);				
 	
-	//AFIP / impuesto solidario
-	var afip = fnafip(preciousd);		
-	var afip35 = parseFloat(preciousd * 0.35)
+		//Impuesto aduanero
+		var aduana = fnaduana(usd,precio); 
 	
-	//TASA CORREO(140pe)
-	var tasa = fntasa();			
+		//AFIP / impuesto solidario
+		var afip = fnafip(preciousd);		
+		var afip35 = parseFloat(preciousd * 0.35)
 	
-	//TOTAL
-	var total = parseFloat(preciousd) + parseFloat(afip) + parseFloat(afip35) + parseFloat (aduana) + parseFloat(tasa);	
+		//TASA CORREO(140pe)
+		var tasa = fntasa();			
+	
+		//TOTAL
+		var total = parseFloat(preciousd) + parseFloat(afip) + parseFloat(afip35) + parseFloat (aduana) + parseFloat(tasa);	
 
-	mostrar(afip,tasa,aduana,preciousd,total,afip35);
+		if(total > 0){
+			mostrar(afip,tasa,aduana,preciousd,total,afip35);
+		}
+	}	
 		
 }
 
@@ -203,7 +220,7 @@ function mostrar(afip,tasa,aduana,preciousd,total,afip35) {
 	document.getElementById("afip35").value=fixvalues(afip35);
 
 	console.log('----------------------------------')		
-	console.log('Precio ARS: ' + usd);
+	console.log('Precio ARS: ' + preciousd);
 	console.log('Aduana: ' + aduana);	
 	console.log('AFIP 30%: ' + afip);
 	console.log('AFIP 35%: ' + afip35);

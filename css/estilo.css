@@ -79,15 +79,9 @@ body {
   font-weight: 400;
   margin: 0px 0px 0px 60px;
   height: 48px;
-  /* float: right; */
-  /*width: 280px;*/
   width: 200px;
   font-size: 2.3em;
   text-align: center;
-}
-
-div,label,input {
-  /* border: solid !important; */
 }
 
 #txttitulo{
@@ -117,8 +111,7 @@ input {
   text-align: right;  
   max-width: 150px;
   font-size: 1.2em;
-  /* margin-top: -3px; */
-  /* border: solid; */
+  display: none;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -166,49 +159,27 @@ input:-moz-placeholder { color:#91c260; }
   color: #333;  
 }
 
-#lista, #lista_aduana,#lista_correo, #lista_total{
-  /* float: left;
-  height: 14px;
-  font-size: 1em;  
-  margin-bottom: 4px;
-  margin-right:10px;
-  width: 45% !important; */
-}
-
 .css-label{
   margin-bottom: 4px;
 }
-
-/* #lista_aduana{
-   width: 100%; 
-} */
-
-#aduana, #tasa {
-  /* margin-right: 18px; */
-}
-
-/* #tasa{
-	width:50px;
-	margin-left:60px;
-	text-align: right;
-} */
 
 #lista_total{
   margin-top: 10px;
   height: 30px;
 }
 
+#exterior,#taxes{
+  padding-top: 2px;
+}
+
+#divtotal{
+  padding-top: 8px;
+  margin-top: 15px;  
+}
+
 .sub{
   font-size: 0.6em;
   vertical-align: 3px;
-}
-
-#total, #afip,#afip35, #aduana,#tasa, #preciototal,#optaduana{
-  /* float: right;
-  text-align: right;  
-  width: 150px;
-  font-size: 1.2em;
-  margin-top: -3px; */
 }
 
 #preciototal{
@@ -220,15 +191,21 @@ input:-moz-placeholder { color:#91c260; }
 }
 
 .item{
+  height: 25px;
+  margin-top: 5px;
+}
 
+hr{  
+  border: 0;
+  border-top: 1px dashed #999;  
 }
 
 .borde{
-  margin: 0 0 26 0;
-  display: block;
-  float: left;
+  /* margin: 0 0 26 0; */
+  /* margin: 0 0 12 0; */  
   width: 100%;
-  border-top: 1px dashed #999;
+  border-top: 1px dashed #999; 
+  margin: 0;  
 }
 
 cursor{
@@ -251,7 +228,3 @@ cursor{
 #btndock:hover{
   background-position: 0 -27px;
 }
-
-/*#get-precio:hover{
-	cursor:white;
-}*/
