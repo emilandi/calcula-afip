@@ -54,7 +54,7 @@ footer{
 
 .logo-img{
   float: left;
-  background-image: url("img/logo2.png");
+  background-image: url("../img/logo2.png");
   background-repeat: no-repeat;
   background-position: right;
   width: 24%;
@@ -283,21 +283,23 @@ li.title2{
 
 input[type=checkbox] + label {
   display:inline-block;  
-  background:url("img/nocheck.png") no-repeat;  
-  width: 200px;
+  background:url("/img/nocheck.png") no-repeat;  
+  /* width: 200px; */
   background-size: 16px;
   background-position: left; 
   padding-left: 25px;
+  cursor: pointer;
 }
 
 input[type=checkbox]:checked + label {
-  background:url("img/check.png") no-repeat;  
-  width: 200px;
+  background:url("/img/check.png") no-repeat;  
+  /* width: 200px; */
   display:inline-block;  
   padding-left: 25px;  
   background-size: 16px;
   background-position: left; 
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 #lista_aduana,#lista_correo{
