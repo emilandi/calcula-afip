@@ -87,7 +87,7 @@ u{
 #loading{  
   display: block;
   position: absolute;
-  background: url('../img/load.gif') no-repeat;
+  background: url('img/load.gif') no-repeat;
   width: 18px;
   height: 10px;
   margin-left: 25%; 
