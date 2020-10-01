@@ -97,7 +97,7 @@ footer a{
 #loading{  
   display: block;
   position: absolute;
-  background: url('../img/load.gif') no-repeat;
+  background: url('img/load.gif') no-repeat;
   width: 18px;
   height: 10px;
   margin-left: 25%; 
@@ -105,18 +105,18 @@ footer a{
 }
 
 #edit{   
-    background: url('/img/edit.gif') no-repeat;   
+    background: url('img/edit.gif') no-repeat;   
 }
 
 #optrate{ 
-  background: url('/img/eurousd321.png') no-repeat; 
+  background: url('img/eurousd321.png') no-repeat; 
   cursor: pointer;
 }
 
 #btndark{  
   width: 25px;
   height: 25px;
-  background: url('../img/Antu_contrast.svg') no-repeat;
+  background: url('img/Antu_contrast.svg') no-repeat;
   display: none;
 }  
 
@@ -176,7 +176,7 @@ footer a{
 }
 
 #edit:hover{
-    background: url(../img/edit.gif) no-repeat;    
+    background: url(img/edit.gif) no-repeat;    
     background-position: 0 -32px;
 }
 
@@ -216,7 +216,7 @@ svg{
 
 .dolar{  
   color: #439a3b;
-  background: #694 url(../img/back.gif);    
+  background: #694 url(img/back.gif);    
 }
 
 .icon{
@@ -224,7 +224,7 @@ svg{
 }
 
 .euro{    
-    background: #694 url(../img/back_01.gif);  
+    background: #694 url(img/back_01.gif);  
     color: #fff;  
     color: #394089;
 }
@@ -348,7 +348,7 @@ cursor{
   width: 27px;
   height: 27px;
   border: 0px;
-  background: url('../img/attach.png') no-repeat;
+  background: url('img/attach.png') no-repeat;
   background-position: 0 0;
   cursor: pointer;
 }

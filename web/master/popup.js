@@ -5,7 +5,7 @@ $(document).ready(init);
 
 function init () {
 	console.log('ready');
-	console.log('v.1');
+	console.log('v. 0.1');
 	
 	$('#get-usd').val('');
 	$('#get-precio').attr('placeholder','loading...');	
@@ -205,15 +205,18 @@ function calcula () {
 	console.log('Correo: ' + tasa);		
 	console.log('Total General: ' + total);
 	
-	if(total > 0 ){
-		$([document.documentElement, document.body]).animate({
-			scrollTop: $("#get-precio").offset().top
-		}, 400);	
-	}
-	else{
-		$([document.documentElement, document.body]).animate({
-			scrollTop: $(document.body).offset().top
-		}, 300);
+	var w = document.body.clientWidth;
+	if(w < 500){	
+		if(total > 0 ){
+			$([document.documentElement, document.body]).animate({
+					scrollTop: $("#get-precio").offset().top				
+			}, 400);	
+		}
+		else{
+			// $([document.documentElement, document.body]).animate({
+			// 	scrollTop: $(document.body).offset().top
+			// }, 400);
+		}
 	}
 	
 		

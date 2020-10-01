@@ -1,0 +1,328 @@
+
+div,input,label {
+  border: none !important;
+}
+
+h3{
+  height: 40px;
+  font-size: 1.4em !important;   
+  text-align: center;
+  color: #e7e9d2;
+}
+
+body {
+  font-size: 1em !important;
+  width:100%;
+  height: 100%;
+  background: rgb(134,184,62);
+  background: radial-gradient(circle, rgba(134,184,62,1) 0%, rgba(28,83,84,1) 100%);
+  font-family: "IBM Plex Mono", monospace !important;  
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 95%;
+}
+
+
+#ticket{ 
+  margin-top: 6%;
+  float: left;
+  width: 32%;
+  min-width: 500px;
+}
+
+/*#ticket{  
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 32%;
+  min-width: 500px;
+}*/
+
+#ticket-head{
+  float: left;
+  width: 100%;
+  height: 20%;
+  border-radius: 12px 12px 0 0;
+  background-color: #fbfbfb;
+}
+
+#ticket-fondo{
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-color:none;
+  border-radius: 12px 12px 0 0;
+  border: 0px;
+}
+
+footer{
+  float: left;
+  height: 5%;
+  width: 100%;   
+}
+
+a{
+  text-decoration: none !important;
+}
+
+#main{
+  margin-top: 220px;
+  margin-left: 10px;
+  display: block;  
+  float: right;
+  margin-top: 20px;
+  margin-right:2%;
+}
+
+#logo{  
+  margin-left: 2%;
+  margin-top: 16px;
+  display: inline-block; 
+}
+
+.logo-img{
+  float: right;
+  width: 31px;
+  height: 38px;
+  background-image: url(img/bolsa.png);
+}
+
+#repo{
+  margin: 0; 
+  width: 100%;
+  text-align: center;  
+}
+
+#links{
+  width: 100%;
+  text-align: center;
+}
+
+
+#loading{  
+  display: block;
+  position: absolute;
+  background: url('../img/load.gif') no-repeat;
+  width: 18px;
+  height: 10px;
+  margin-left: 25%; 
+  margin-top: 20px;
+}
+
+.iconos{
+  width: 32px;
+  height: 32px;
+  margin-left: 16px;
+}
+
+#data{
+  margin-top: 16px;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+#get-usd{
+  float: left;
+  font-family: 'Arbutus Slab', serif !important;
+  width: 100%;
+  height: 70px;
+  margin-top: 10%;
+  font-size: 3.6em;
+  text-align: center;
+  background-color: aqua;
+  color: #72a542 !important;
+}
+
+a#opciones{
+  float: left;
+  font-family: 'Arbutus Slab', serif !important;
+  background: none;
+  width: 33.33%;
+  font-size: 1.8em;
+  text-align: center;
+  background-color: #3f0;
+  color: rgb(210, 210, 220);
+  //border-left: 1px solid #333;
+}
+
+a#opciones:hover,a#opciones:focus{
+  margin-top: -6px;
+}
+
+a.usd-sel:hover,a.usd-sel:focus{
+  color: #3d973a !important;
+}
+
+a.eur-sel:hover,a.eur-sel:focus{
+  color: #5e3b9a !important;
+}
+
+a.edit-sel:hover,a.edit-sel:focus{
+  color: #a77743 !important;
+}
+
+#edit,#optrate{
+  margin-top: 45px;
+  cursor: pointer;
+  border-left: 1px solid #cecece;
+}
+
+#edit,#optrate,.DE{
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.DE{  
+  font-family: 'IBM Plex Mono', serif !important;
+  font-size: 16px;
+}
+
+#get-precio{
+  font-size: 3em;
+  width: 100%;
+  padding: 0 30px 0 20px;
+  background-color: #bab9c4;
+  background-image: url("img/usd.gif"); 
+  border-left: 2px solid #fbfbfb;
+  border-right: 2px solid #fbfbfb;
+  text-align: right;
+  color: #333 !important;
+}
+
+
+
+.dolar{
+  color: #72a542 !important;
+}
+
+.euro{    
+  color: #394089 !important;
+}
+
+#txttitulo{
+  letter-spacing: 5px;  
+  width: 100%;
+  height: 50px;
+  margin-top: 0px;
+  margin-left: 2px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+ol{
+  width: 100%;
+  padding: 0px;
+}
+
+li{
+  padding: 15px 35px 15px 30px;
+  float: left;
+  width: 100%;
+  list-style: none;
+  background-color: #ecedf0;
+  
+}
+
+li{
+  //border-bottom: 1px dotted #333;
+}
+
+li:nth-child(odd){
+  background-color:#fbfbfb;
+}
+
+li.title2{
+  font-size: 2em;
+  border:2px solid #fbfbfb;
+  border-radius: 0 0 12px 12px;
+  padding-top: 24px;
+  height: 110px;
+  -webkit-box-shadow: 0px 20px 16px -19px rgba(48,60,107,1);
+  -moz-box-shadow: 0px 20px 16px -19px rgba(48,60,107,1);
+  box-shadow: 0px 20px 16px -19px rgba(48,60,107,1);
+}
+
+#afip,#afip35,#total,#aduana,#tasa,#preciototal{
+  float: right;
+  text-align: right;  
+  color: #333;
+  width: 70%;
+  background: none;
+}
+
+#lista_total{
+  float: left;    
+  font-size: 1em;
+}
+
+input[type=checkbox] + label {
+  display:inline-block;
+  /* padding: 0 0 0 0px; */
+  background:url("img/nocheck.png") no-repeat;
+  /* height: 32px; */
+  width: 200px;
+  background-size: 16px;
+  background-position: left; 
+  padding-left: 25px;
+}
+
+input[type=checkbox]:checked + label {
+  background:url("img/check.png") no-repeat;  
+  width: 200px;
+  display:inline-block;  
+  padding-left: 25px;  
+  background-size: 16px;
+  background-position: left; 
+  background-repeat: no-repeat;
+}
+
+#lista_aduana,#lista_correo{
+  cursor: pointer;
+}
+
+.css-label{
+  margin-bottom: 4px;
+}
+.sub{
+  margin-left: -5px;
+  font-size: 0.7em;
+  vertical-align: 3px;
+}
+
+#btndock{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  float: left;
+  width: 27px;
+  height: 27px;
+  border: 0px;
+  background: url('../img/attach.png') no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+}
+#btndock:hover{
+  background-position: 0 -27px;
+}
+
+
+/* ocultar flechas input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  border: none;
+}

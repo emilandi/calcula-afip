@@ -1,0 +1,328 @@
+div,input,label,img {
+  border: none !important;
+}
+
+body {
+  font-size: 1em !important;
+  width:100%;
+  height: 100%;
+  background: rgb(134,184,62);
+  background: radial-gradient(circle, rgba(134,184,62,1) 0%, rgba(28,83,84,1) 100%);
+  font-family: "IBM Plex Mono", monospace !important;  
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 95%;
+}
+
+#ticket{ 
+  height: 100%;
+  width: 32%;
+  min-width: 500px;
+}
+
+#ticket-head{
+  float: left;
+  width: 100%;
+  height: 170px;
+  border-radius: 12px 12px 0 0;
+  background-color: #fbfbfb;
+}
+
+#ticket-fondo{
+  float: left;
+  width: 100%;
+  height: 80%;
+  border-radius: 12px 12px 0 0;
+  border: 0px;
+}
+
+footer{
+  text-align: center;
+  height: 5%;
+  width: 100%;  
+}
+
+#logo{  
+  width: 100%;
+  height: 18%;
+  padding-top: 6%;
+}
+
+.logo-img{
+  float: left;
+  background-image: url("img/logo2.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 24%;
+  height: 87px;
+}
+
+.logo-title, .logo-subt{
+  float: left;
+  margin-left: 4%;
+  width: 72%;
+  color: #fbfbfb;
+  font-family: 'Rufina', serif;
+}
+
+.logo-title{
+  margin-top: -22px;
+  font-size: 27px !important;   
+}
+
+u{
+  border-bottom: 1px solid #e7e9d2;
+  text-decoration:none;
+}
+
+.logo-subt{
+  margin-top: 18px;
+  font-size: 21px !important;
+}
+
+#loading{  
+  display: block;
+  position: absolute;
+  background: url('../img/load.gif') no-repeat;
+  width: 18px;
+  height: 10px;
+  margin-left: 25%; 
+  margin-top: 20px;
+}
+
+.iconos{
+  width: 32px;
+  height: 32px;
+  margin-left: 16px;
+}
+
+#data,#options{
+  margin-top: 16px;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+#get-usd{
+  float: left;
+  font-family: 'Arbutus Slab', serif;  
+  width: 100%;
+  height: 70px;
+  margin-top: 8%;
+  font-size: 3.6em;
+  text-align: center;
+  /* color: #72a542 !important; */
+  background-color: #fbfbfb;
+}
+
+#solid{
+  color: white;  
+  float: left;
+  padding-top: 15px;
+}
+
+/* icono solid */
+.far , .fa-hand-peace{
+  font-size: 1.5em;
+  color:white;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+/* icono edit */
+.far , .fa-edit{
+  margin-top: 3px;
+  margin-bottom: 12px;
+}
+
+/* smile */
+.smile{
+  display: none;
+}
+
+#hand{
+  cursor: pointer;
+}
+
+#ucotiza{
+  display: none;
+}
+
+a#optUSD:hover,a#optUSD:focus{
+  color: #3d973a !important;
+}
+
+a#optEUR:hover,a#optEUR:focus{
+  color: #5e3b9a !important;
+}
+
+a#edit:hover,a#edit:focus{
+  color: #a77743 !important;
+}
+
+/* #edit,#optrate{
+  margin-top: 15px;
+  cursor: pointer;
+  border-left: 1px solid #cecece;
+} */
+
+/* #edit,#optrate,.DE{
+  float: left;
+  width: 100%;
+  text-align: center;
+} */
+
+a.option-items{
+  margin-top: 25px;
+  float: left;
+  font-family: 'Aleo', serif;
+  width: 33.33%;
+  height: 90px;
+  font-size: 1.8em;
+  text-align: center;
+  color: rgb(210, 210, 220);
+  border-left: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+a span{
+  display: block;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.DE{  
+  font-family: 'IBM Plex Mono', serif !important;
+  font-size: 16px;
+}
+
+#get-precio{
+  font-size: 3em;
+  width: 100%;
+  padding: 0 30px 0 20px;
+  background-color: #bab9c4;
+  background-image: url("img/usd.gif"); 
+  border-left: 2px solid #fbfbfb;
+  border-right: 2px solid #fbfbfb;
+  text-align: right;
+  color: #455 !important;
+}
+
+.dolar{
+  color: #72a542 !important;
+}
+
+.euro{    
+  color: #394089 !important;
+}
+
+#txttitulo{ 
+  width: 100%;
+  height: 50px;
+  margin-top: 0px;
+  margin-left: 2px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+ol{
+  width: 100%;
+  padding: 0px;
+}
+
+li{
+  padding: 15px 35px 15px 30px;
+  float: left;
+  width: 100%;
+  list-style: none;
+  background-color: #e7e9f1;
+  color: #455;  
+}
+
+li{
+  //border-bottom: 1px dotted #333;
+}
+
+li:nth-child(odd){
+  background-color:#fbfbfb;
+}
+
+li.title2{
+  font-size: 2em;
+  border-radius: 0 0 12px 12px;
+  padding-top: 24px;
+  height: 110px;
+  -webkit-box-shadow: 0px 20px 16px -19px rgba(48,60,107,1);
+  -moz-box-shadow: 0px 20px 16px -19px rgba(48,60,107,1);
+  box-shadow: 0px 20px 16px -19px rgba(48,60,107,1);
+}
+
+#afip,#afip35,#total,#aduana,#tasa,#preciototal{
+  float: right;
+  text-align: right;  
+  color: #455;  
+  width: 65%;
+  background: none;
+}
+
+#lista_total{
+  float: left;    
+  font-size: 1em;
+}
+
+#links a {
+  color: white;
+  margin-left: 30px;
+}
+
+input[type=checkbox] + label {
+  display:inline-block;  
+  background:url("img/nocheck.png") no-repeat;  
+  width: 200px;
+  background-size: 16px;
+  background-position: left; 
+  padding-left: 25px;
+}
+
+input[type=checkbox]:checked + label {
+  background:url("img/check.png") no-repeat;  
+  width: 200px;
+  display:inline-block;  
+  padding-left: 25px;  
+  background-size: 16px;
+  background-position: left; 
+  background-repeat: no-repeat;
+}
+
+#lista_aduana,#lista_correo{
+  cursor: pointer;
+}
+
+.css-label{
+  margin-bottom: 4px;
+}
+.sub{
+  margin-left: -5px;
+  font-size: 0.7em;
+  vertical-align: 3px;
+}
+
+/* ocultar flechas input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  border: none;
+}
