@@ -1,0 +1,36 @@
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+
+
+    #preciototal,#total{
+        color:red;            
+    }
+
+    body{
+        width: 100% !important;
+        border: solid;
+    }
+
+    #container{
+        width: 90%;
+    }
+
+    #ticket {
+        min-width: 300px;
+    }
+
+    div{
+        border: solid !important;
+    }
+
+    #get-usd{
+        font-size: 1.2em;
+    }
+}
+
+
+
+

@@ -33,8 +33,8 @@
 		
 		<!-- CSS only -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">			
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" defer=""></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 
 	</head>
 
@@ -129,7 +129,7 @@
 				</div>
 				
 				<input type="number" id="get-precio" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="Importe" maxlength="12" autocomplete="off">			
-				
+				<div id="detalle">
 					<ol>			
 						<li for="total" title="PESOS ARGENTINOS">
 							AR$ <input type="text" id="total" disabled value="0">
@@ -156,21 +156,26 @@
 							<input type="checkbox" id="optcorreo" class="css-checkbox" />	
 							<label for="optcorreo">TASA</label>
 							<input type="text" for="optcorreo" id="tasa" disabled value="0">
-						</li>		
-					
-						<li class="title2" for="preciototal">
-							TOTAL 
-							
-							<i id="smile1" class="far fa-grin-beam-sweat smile"></i>
-							<i id="smile2" class="far fa-frown smile "></i>
-							<i id="smile3" class="far fa-angry smile"></i>
-							<i id="smile4" class="far fa-sad-cry smile"></i>
-							<i id="smile5" class="far fa-flushed smile"></i>
-							<i id="smile6" class="far fa-dizzy smile"></i>
-
-							<input type="text" id="preciototal" disabled value="0">
 						</li>
+				
+					
+						<div id="divtotal">
+							<li class="title2" for="preciototal">
+								TOTAL 				
+								
+								<i id="smile1" class="far fa-grin-beam-sweat smile"></i>
+								<i id="smile2" class="far fa-frown smile "></i>
+								<i id="smile3" class="far fa-angry smile"></i>
+								<i id="smile4" class="far fa-sad-cry smile"></i>
+								<i id="smile5" class="far fa-flushed smile"></i>
+								<i id="smile6" class="far fa-dizzy smile"></i>
+
+								<input type="text" id="preciototal" disabled value="0">
+							</li>
+						</div>
+
 					</ol>
+				</div>
 
 					<span id="solid"></span>
 
@@ -193,5 +198,7 @@
 				<a href="https://github.com/emilandi/calcula-afip/raw/master/win/calcula.exe" target="_blank">Desktop App</a>
 			</div>			
 		</footer>
+
 	</body>
+	
 </html>
