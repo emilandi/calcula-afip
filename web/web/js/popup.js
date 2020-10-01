@@ -1,7 +1,7 @@
 var tasa;
 var rate;
 
-$(document).ready(init);
+//$(document).ready(init);
 
 function init () {
 	console.log('ready');
