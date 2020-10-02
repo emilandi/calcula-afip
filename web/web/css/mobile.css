@@ -1,36 +1,233 @@
 
 @media only screen and (max-width: 600px) {
+   
     body {
       background-color: lightblue;
     }
+    
+    input{
+        border: none;
+    }
+    
+    #logo{
+        width: 100%;
+        height: 15%;
+        padding: 0;
+        /* border: solid blue !important; */
+    }
 
+    .logo-img{
+        float: left;
+        background-image: url(../img/logo2.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 64px;
+        width: 24%;
+        height: 100%;
+    }    
 
-    #preciototal,#total{
-        color:red;            
+    .title{
+     font-size: 1em;   
+    }
+
+    .data{
+        font-size: 1.2em;
+        max-width: 50% !important;
+    }
+
+    
+    /* titulo total */
+    li.title2{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 1.2em;
+        border-radius: 0 0 12px 12px;           
+        height: 15%;                     
+        -webkit-box-shadow: 0px 20px 16px -19px rgba(48,60,107,1); 
+        -moz-box-shadow: 0px 20px 16px -19px rgba(48,60,107,1); 
+        box-shadow: 0px 20px 16px -19px rgba(48,60,107,1);        
+    }
+
+    #divtotal{
+        height: 100%;
+    }
+
+    .logo-subt{
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size: 16px !important;
+    }
+
+    .logo-title{
+        padding-top: 5px;
+        margin-left: 10px;
+        font-size: 16px !important;
+    }
+
+    #preciototal{
+       text-align: right !important;
+       float: right !important;
     }
 
     body{
-        width: 100% !important;
-        border: solid;
+        width: 100% !important;        
     }
 
-    #container{
-        width: 90%;
-    }
+    #container{        
+        /* width: 96% !important;
+        margin-left: 2%; */
+        width: 96%;
+        margin-left: 2%;
+        display: block !important;
+    }    
 
     #ticket {
-        min-width: 300px;
+        margin: 0;
+        min-width: 10%;
+        min-height: 400px;
+        width: 100%;
+        height: 40%;
     }
 
-    div{
-        border: solid !important;
+    div,ol,body{
+        /* border: solid !important; */
     }
+
+    #share{        
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        margin-left: 25%;
+    }
+
+    #share a{
+        color: white;
+    }   
+
+    
+
 
     #get-usd{
-        font-size: 1.2em;
+        font-size: 2em !important;
+    }
+
+    #get-precio{
+        font-size: 1.4em;
+        height:50px;
+    }
+    
+    #ticket-head{
+        height: 20%;
+        padding: 0;
+        margin: 0;        
+        /* max-height: 80px !important; */
+    }
+
+    div#data{
+        height: 100%;
+        padding: 0;
+        margin: 0;        
+    }    
+
+    div#options{
+        height: 100%;
+        padding: 0;
+        margin: 0;        
+    }
+    
+    a.option-items {    
+        float: left;
+        font-family: 'Aleo', serif;
+        width: 33.33%;
+        height: 70%;        
+        font-size: 1em;
+        text-align: center;
+        color: rgb(210, 210, 220);
+        border-left: 1px solid #ccc;                
+        margin-top: 15% !important;
+        padding-top:0 !important;
+    }
+
+    
+    #detalle{
+        width: 100%;
+        height: 70%;
+    }
+
+    ol{
+        width: 100%;
+        height: 100%;  
+        margin: 0;      
+        padding: 0;
+    }
+    
+    li{
+        padding-left:10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        float: left;
+        width: 100%;
+        list-style: none;
+        background-color: #e7e9f1;
+        color: #455;  
+        height: 15%;
+    }
+
+    .data {
+        max-width: 100px;
+        display: none;
+    } 
+
+    /* icono hand solid */
+    .far , .fa-hand-peace{
+        font-size: 1.5em;
+        color:b9ccea;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    
+    /* icono edit */
+    .far , .fa-edit{        
+        font-size: 1.8em;
+        margin: 0 !important;
+        padding: 0 !important;
+        /* color:grey */
+        /* margin-top: 3px; */
+        /* margin-bottom: 8px;  */
+    }   
+
+    /* icono usd */
+    .fas , .fa-dollar-sign{
+        font-size: 1.8em;
+        /* color:green; */
+    }
+
+    /* icono euro */
+    .fas , .fa-euro-sign{
+        font-size: 1.8em;
+        /* color:indigo; */
+    }
+
+     /* icono wp */
+     .fab , .fa-whatsapp{
+        /* color:white; */
+        font-size: 1.5em;
+    }
+
+
+    .DE {
+        font-family: 'IBM Plex Mono', serif !important;
+        font-size: 12px;
+    }    
+
+    footer{
+        display: none !important;
+    }
+
+    label{
+        margin: 0 !important;
     }
 }
-
-
-
-

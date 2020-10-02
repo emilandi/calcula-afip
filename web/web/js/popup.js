@@ -1,7 +1,8 @@
 var tasa;
 var rate;
+const urlwp = 'https://api.whatsapp.com/send?text=https://calcula-afip.web.app/?=v';
 
-//$(document).ready(init);
+$(document).ready(init);
 
 function init () {
 	console.log('ready');
@@ -43,6 +44,12 @@ function init () {
 }
 
 function getParam() {
+	
+	var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
+	var url = new URL(url_string);
+	var c = url.searchParams.get("c");
+	console.log(c);
+	
 	var param = window.location.search;
 	console.log(param);
 	if(param){
@@ -127,7 +134,10 @@ function datos (resp) {
 
 		$("#get-usd").hide().fadeIn(300).val(rate);						
 		$('#solid').hide().fadeIn(300).text(msg);
-		$('#txttitulo').hide().fadeIn(300).val(fecha);
+		$('#txttitulo').hide().fadeIn(300).text(fecha);
+		
+		//var fecha = getDate();			
+		// $('#txttitulo').text(fecha);
 		
 		$("#get-precio").focus();	
 
@@ -192,6 +202,12 @@ function calcula () {
 		$('#smile6').show();		
 	}
 
+	if(preciousd > 0) {
+		$('.data').fadeIn(400);
+	}else{
+		$('.data').fadeOut(300);
+	}
+
 
 
 	
@@ -222,16 +238,13 @@ function fnRateChange (getRate) {
 		fnSetValues('rate','EUR');
 		fnChangeClass('get-usd','euro');
 		fnChangeClass('get-precio','euro');
-		$('#txttitulo').text('AR$ = 1 EUR');		
+		// $('#txttitulo').text('AR$ = 1 EUR');		
 	}else{			
 		fnSetValues('rate','USD');						
 		fnChangeClass('get-usd','dolar');		
 		fnChangeClass('get-precio','dolar');		
-		$('#txttitulo').text('AR$ = 1 EUR');		
-	};	
-
-	var fecha = getDate();	
-	$('#txttitulo').text(fecha);
+		// $('#txttitulo').text('AR$ = 1 EUR');		
+	};
 
 	consulta();
 }
@@ -255,9 +268,6 @@ function fixvalues (values) {
 	var obj=parseFloat(values).toFixed(2);
 	return obj;
 }
-
-
-
 
 function getDate() {
 	var f = new Date();
@@ -355,6 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	hand.addEventListener('mouseover',function(){		
 		audio.currentTime = 37			
+		audio.volume = 0.3;
 		audio.play();	
 	})
 
@@ -363,6 +374,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		//audio.currentTime = 0;		
 	})	
 
+	console.log(urlwp);
+	document.getElementById('wp').addEventListener('click',wp);	
+	
 	// $('#hand').click(function() {
 	// 	audio.play();		
 	// });
@@ -374,6 +388,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	
 });
+
+
+function wp() {
+	console.log(urlwp);
+	var value = document.getElementById('get-precio').value;
+	if(value){
+		this.href = urlwp + value;
+	}else{
+		alert('Ingrese un importe valido ');
+		$('#get-precio').focus();
+	}	
+}
 
 
 function dark () {		

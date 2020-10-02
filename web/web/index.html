@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 
 	<head>
 		<meta charset="UTF-8">
@@ -27,12 +27,11 @@
 		<link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
 
-		<title>Calculadora de compras en el exterior</title>
-		<link rel="icon" type="image/png"  href="favicon.png">
-		<link rel="icon" type="image/png" href="favicon.png">
+		<title>Calculadora de compras en el exterior</title>		
+		<link rel="icon" type="image/png" href="favicon.ico">
 		
 		<!-- CSS only -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">			
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">			 -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 
@@ -79,44 +78,38 @@
 					<img class="iconos" src="img/iwd.png" alt="Desktop App">
 				</a>
 			</nav>
-		</header> -->
+		</header> -->	
 
-	<div id="container">
-		<div id="ticket">
+	<div id="container">	
+
+		<div id="ticket">	
 			
-			<a href="/">
-				<div id="logo">
+			<div id="logo">
+				<a href="/">			
 					<span class="logo-img"></span>
 					<p class='logo-subt'>Calculadora de</p> 
-					<p class='logo-title'>COMPRAS EN EL <u>EXTERIOR</u></p>
-		
-				</div>
-			</a>
-
-			<div id="ticket-fondo">
+					<p class='logo-title'>COMPRAS EN EL <u>EXTERIOR</u></p>	
+				</a>
+			</div>
+			
+			<!-- <div id="ticket-fondo"> -->
 				
 				<div id="ticket-head">
 					
 					<div id="data">
 						<input type="number" id="get-usd" min="0" name="usd" disabled value="123" size="32" autocomplete="off">
-						<label id="txttitulo">
-							<!-- Cotización al 
-							<script>
-								var f = new Date();
-								document.write(f.getDate() + "·" + (f.getMonth() +1) + "·" + f.getFullYear());
-							</script> -->
-						</label>	
+						<label id="txttitulo"></label>	
 					</div>
 					
 					<div id="options">					
 						
-						<a href="#" id="optUSD" class="option-items" >
-							<span>$</span>
+						<a href="#" id="optUSD" class="option-items" >						
+							<i class="fas fa-dollar-sign"></i>
 							<span class="DE">Dolar</span>
 						</a>
 
-						<a href="#" id="optEUR" class="option-items">
-							<span>€</span>							
+						<a href="#" id="optEUR" class="option-items">							
+							<i class="fas fa-euro-sign"></i>					
 							<span class="DE">Euro</span>
 						</a>
 
@@ -126,78 +119,96 @@
 						</a>
 
 					</div>
+
 				</div>
 				
 				<input type="number" id="get-precio" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="Importe" maxlength="12" autocomplete="off">			
+				
 				<div id="detalle">
+					
 					<ol>			
-						<li for="total" title="PESOS ARGENTINOS">
-							AR$ <input type="text" id="total" disabled value="0">
+						<li for="total" title="PESOS ARGENTINOS" class="title" >
+							AR$ <input type="text" id="total" class="data" disabled value="0">
 						</li>		  
 					
-						<li for="afip" title="IMPUESTO SOLIDARIO">
+						<li for="afip" class="title" title="IMPUESTO SOLIDARIO">
 							IMP.PAIS <span class="sub">30%</span>
-							<input type="text" id="afip" disabled value="0">
+							<input type="text" id="afip" class="data"  disabled value="0">
 						</li>		
 
-						<li for="afip35" title="PERCEPCION DE GANANCIAS 35%">
+						<li for="afip35" class="title" title="PERCEPCION DE GANANCIAS 35%">
 							AFIP <span class="sub">35%</span>
-							<input type="text" id="afip35" disabled value="0">
+							<input type="text" id="afip35" class="data" disabled value="0">
 						</li>	
 
-						<li id="lista-aduana" class="title1" for="optaduana" title="Solo si recibis un envio desde el exterior.">
+						<li id="lista-aduana" class="title" class="title1" for="optaduana" title="Solo si recibis un envio desde el exterior.">
 							<input type="checkbox" name="opt1" id="optaduana" class="css-checkbox" />
-							<label for="optaduana">ADUANA</label>
+							<label for="optaduana" class="title" >ADUANA</label>
 							<span class="sub">50%</span>							
-							<input type="text"for="optaduana" id="aduana" disabled value="0">	
+							<input type="text"for="optaduana" id="aduana" class="data" disabled value="0">	
 						</li>
 						
-						<li id="lista-correo" class="title1" for="optcorreo" title="TASA CORREO">
+						<li id="lista-correo" class="title" for="optcorreo" title="TASA CORREO">
 							<input type="checkbox" id="optcorreo" class="css-checkbox" />	
-							<label for="optcorreo">TASA</label>
-							<input type="text" for="optcorreo" id="tasa" disabled value="0">
-						</li>
-				
-					
-						<div id="divtotal">
-							<li class="title2" for="preciototal">
-								TOTAL 				
-								
-								<i id="smile1" class="far fa-grin-beam-sweat smile"></i>
-								<i id="smile2" class="far fa-frown smile "></i>
-								<i id="smile3" class="far fa-angry smile"></i>
-								<i id="smile4" class="far fa-sad-cry smile"></i>
-								<i id="smile5" class="far fa-flushed smile"></i>
-								<i id="smile6" class="far fa-dizzy smile"></i>
+							<label for="optcorreo" class="title" >TASA</label>
+							<input type="text" for="optcorreo" id="tasa" class="data" disabled value="0">
+						</li>					
+						
+						<li class="title2" for="preciototal">
+							
+							TOTAL 				
+							
+							<i id="smile1" class="far fa-grin-beam-sweat smile"></i>
+							<i id="smile2" class="far fa-frown smile "></i>
+							<i id="smile3" class="far fa-angry smile"></i>
+							<i id="smile4" class="far fa-sad-cry smile"></i>
+							<i id="smile5" class="far fa-flushed smile"></i>
+							<i id="smile6" class="far fa-dizzy smile"></i>
 
-								<input type="text" id="preciototal" disabled value="0">
-							</li>
-						</div>
+							<input type="text" id="preciototal" disabled value="0">
+						
+						</li>					
 
 					</ol>
-				</div>
 
+				</div>	
+			
+				<div id="info">
+					
 					<span id="solid"></span>
-
+							
 					<a href="#" id="hand">
 						<i class="far fa-hand-peace"></i>
 					</a>
 
-					<span id="ucotiza">Cotizacion al 01-10-2020 - 04:18</span>
+				</div>			
 
+				<div id="share">
+					<a href="#" id="wp">
+						<i class="fab fa-whatsapp"></i>						
+						Compartir
+					</a>						
 				</div>
+				
+				<span id="ucotiza">Cotizacion al 01-10-2020 - 04:18</span>
 		
-			</div>
+			<!-- div ticket-fondo -->
+			<!-- </div> -->
 
-		</div>
+		</div>	
+		
+	</div>
+		
+		
+		
 
-		<footer>
-			<div id="links">
-				<a href="https://chrome.google.com/webstore/detail/calculadora-de-compras-en/jdiiofgmndfmjgmgkdogjkelfgjnicim?hl=es-419" target="_blank">Chrome Extension</a>
-				<a href="https://addons.mozilla.org/es/firefox/addon/calculadora-afip/" target="_blank">Complemento para firefox</a>
-				<a href="https://github.com/emilandi/calcula-afip/raw/master/win/calcula.exe" target="_blank">Desktop App</a>
-			</div>			
-		</footer>
+	<footer>
+		<div id="links">
+			<a href="https://chrome.google.com/webstore/detail/calculadora-de-compras-en/jdiiofgmndfmjgmgkdogjkelfgjnicim?hl=es-419" target="_blank">Chrome Extension</a>
+			<a href="https://addons.mozilla.org/es/firefox/addon/calculadora-afip/" target="_blank">Complemento para firefox</a>
+			<a href="https://github.com/emilandi/calcula-afip/raw/master/win/calcula.exe" target="_blank">Desktop App</a>
+		</div>			
+	</footer>
 
 	</body>
 	
