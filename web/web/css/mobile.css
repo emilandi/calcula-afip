@@ -3,6 +3,8 @@
    
     body {
       background-color: lightblue;
+      margin: 0;
+      padding: 0;
     }
     
     input{
@@ -38,9 +40,9 @@
     
     /* titulo total */
     li.title2{
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 5px;
+        /* padding-left: 10px; */
+        /* padding-right: 10px; */
+        /* padding-top: 5px;  */
         padding-bottom: 5px;
         font-size: 1.2em;
         border-radius: 0 0 12px 12px;           
@@ -76,11 +78,8 @@
     }
 
     #container{        
-        /* width: 96% !important;
-        margin-left: 2%; */
-        width: 96%;
-        margin-left: 2%;
-        display: block !important;
+        width: 96%;        
+        margin-left: 2%;                
     }    
 
     #ticket {
@@ -111,11 +110,18 @@
 
     #get-usd{
         font-size: 2em !important;
+        height: 40px;
+        display: block;
     }
 
     #get-precio{
         font-size: 1.4em;
         height:50px;
+    }
+
+    #txttitulo{
+        font-size: 0.6em;
+        padding: 5px;
     }
     
     #ticket-head{
@@ -140,7 +146,7 @@
     a.option-items {    
         float: left;
         font-family: 'Aleo', serif;
-        width: 33.33%;
+        width: 32%;
         height: 70%;        
         font-size: 1em;
         text-align: center;
@@ -164,16 +170,16 @@
     }
     
     li{
-        padding-left:10px;
-        padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        float: left;
-        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        /* float: left; */
+        width: 90%;
         list-style: none;
         background-color: #e7e9f1;
-        color: #455;  
-        height: 15%;
+        color: #455;
+        /* height: 15%; */
     }
 
     .data {

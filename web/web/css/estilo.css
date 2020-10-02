@@ -7,6 +7,8 @@ body {
   font-size: 1em !important;
   /* width:100%; */
   /* height: 100%; */
+  margin: 0;
+  padding: 0;
   background: rgb(134,184,62);
   background: radial-gradient(circle, rgba(134,184,62,1) 0%, rgba(28,83,84,1) 100%);
   font-family: "IBM Plex Mono", monospace !important;  
@@ -56,9 +58,15 @@ body {
 }
 
 footer{
-  text-align: center;
-  height: 5%;
+  margin-top: 100px;
+  text-align: center;  
   width: 100%;  
+  display: block;
+
+  background-color: seagreen;
+  height: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #logo{  
@@ -126,7 +134,7 @@ u{
 .data{
   max-width: 60%;
   font-family:  "IBM Plex Mono", monospace !important;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 #get-usd{
@@ -155,15 +163,22 @@ u{
   margin-left: 15px;
 }
 
-/* icono edit */
-.far , .fa-edit{
+
+/* .far , .fa-edit{
   margin-top: 3px;
   margin-bottom: 12px;
-}
+} */
 
+/* icono edit */
 .far, .fa-edit{
   margin: 0;
   padding: 0;
+}
+
+.fab , .fa-github{
+  color: white;
+  font-size: 2em;
+  margin-top: 20px;
 }
 
 /* smile */
@@ -256,6 +271,7 @@ a{
   margin-left: 2px;
   text-align: center;
   font-size: 0.9em;
+  padding-left: 25px;
 }
 
 ol{
@@ -295,6 +311,7 @@ li.title2{
   -webkit-box-shadow: 0px 20px 16px -19px rgba(48,60,107,1);
   -moz-box-shadow: 0px 20px 16px -19px rgba(48,60,107,1);
   box-shadow: 0px 20px 16px -19px rgba(48,60,107,1);
+  border-radius: 0 0 12px 12px;
 }
 
 #afip,#afip35,#total,#aduana,#tasa,#preciototal{
@@ -303,6 +320,15 @@ li.title2{
   color: #455;  
   width: 65%;
   background: none;
+}
+
+#preciototal{
+  font-size: 1.3em;
+}
+
+#share{
+  margin-left: 5px;
+  margin-top: 10px;
 }
 
 #lista_total{
