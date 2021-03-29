@@ -1,6 +1,8 @@
 var tasa;
 var rate;
-const urlwp = 'https://api.whatsapp.com/send?text=https://calcula-afip.web.app/?=v';
+//const host =  location.origin;
+const host =  'https://calcula-afip.wep.app';
+const urlwp = 'https://api.whatsapp.com/send?text=' + host;
 
 $(document).ready(init);
 
@@ -10,13 +12,34 @@ function init () {
 	$('#get-usd').val('');
 	$('#get-precio').attr('placeholder','loading...');	
 	
+	
+	//check param URL
+	var param = getParam();			
+	console.log(param);	
+
+	var tasa = param[2];
+	var rate = param[3];
+	var value = param[0];
+	var aduana = param[1];	
+	
+	if(value){
+		document.getElementById('get-precio').value=value
+		document.getElementById('optaduana').checked=aduana;
+		document.getElementById('optcorreo').checked=tasa;		
+	}	
+	
+	if(rate){
+		console.log('new rate ' + rate);
+		fnSetValues('rate',rate);
+	}
+
 	// get value rate USD/EUR;
 	getRate = fnGetValues('rate');      
 
 	if (getRate != 'USD' && getRate != 'EUR' ) {		
 		console.log('Rate = ' + getRate + '..error');
 		getRate='USD';
-		fnSetValues('rate','USD');	
+		fnSetValues('rate',getRate);	
 	};
 
 	// config getRate select
@@ -37,27 +60,9 @@ function init () {
     	document.body.className="ligth";
 	}
 
-	fnSetValues('sitio',1);
-
-	getParam();
-	consulta();	
-}
-
-function getParam() {
+	fnSetValues('sitio',1);	
 	
-	var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
-	var url = new URL(url_string);
-	var c = url.searchParams.get("c");
-	console.log(c);
-	
-	var param = window.location.search;
-	console.log(param);
-	if(param){
-		var value = param.substring(3,param.length);
-		document.getElementById('get-precio').value=value
-		console.log(value);
-	}	
-	calcula();
+	consulta();
 }
 
 
@@ -71,7 +76,7 @@ function consulta () {
 		fnSetValues('sitio',1);	
 	}	
 	
-	getResp(url);			
+	getResp(url);	
 
 	console.log('Consultando URL:' + url + ' rate: ' + rate + ' sitio: ' + sitio);	
 
@@ -115,17 +120,7 @@ function datos (resp) {
 		var fecha = getDate();				
 
 		//return USD/EUR
-		var tipo = fnGetValues('rate');						
-		
-		if (tipo=='USD') {
-			var txt = 'AR$ = 1 U$D';
-			var mensaje='Cotizacion actual del dolar: ';
-			var color = 'olive';					
-		}else{
-			var txt = 'AR$ = 1 EUR';	    	
-			var mensaje='Cotizacion actual Euro: ';
-			var color = '#65469b';  //violeta	  
-		};	
+		var tipo = fnGetValues('rate');		
 
 		var msg = '(*) solidario: ' + solid;
 
@@ -134,16 +129,13 @@ function datos (resp) {
 
 		$("#get-usd").hide().fadeIn(300).val(rate);						
 		$('#solid').hide().fadeIn(300).text(msg);
-		$('#txttitulo').hide().fadeIn(300).text(fecha);
-		
-		//var fecha = getDate();			
-		// $('#txttitulo').text(fecha);
+		$('#txttitulo').hide().fadeIn(300).text(fecha);		
 		
 		$("#get-precio").focus();	
 
 		calcula();
 		
-		return rate;			
+		return rate;
 		
 	}
 }
@@ -207,8 +199,8 @@ function calcula () {
 	}else{
 		$('.data').fadeOut(300);
 	}
-
-
+	
+	setParam(); //build url share wp
 
 	
 	// console.log('----------------------------------')		
@@ -279,11 +271,9 @@ function getDate() {
 //eventos
 document.addEventListener('DOMContentLoaded', function() {		
 	
-	//iniciar siempre form popup
-	localStorage.setItem('attach',"false");
-
+	
 	//verifica estado del localstorage para checkbox
-	getStatus = localStorage.getItem('optaduana');    
+	getStatus = localStorage.getItem('optaduana');
     if (getStatus == "true") {
         document.getElementById("optaduana").checked=true;
     }   
@@ -374,8 +364,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		//audio.currentTime = 0;		
 	})	
 
-	console.log(urlwp);
-	document.getElementById('wp').addEventListener('click',wp);	
+	
+	
+	// document.getElementById('wp').addEventListener('click',wp);		
 	
 	// $('#hand').click(function() {
 	// 	audio.play();		
@@ -390,28 +381,64 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function wp() {
-	console.log(urlwp);
-	var value = document.getElementById('get-precio').value;
-	if(value){
-		this.href = urlwp + value;
-	}else{
-		alert('Ingrese un importe valido ');
-		$('#get-precio').focus();
-	}	
+function getParam() {	
+
+	//var param = window.location.search;
+	
+	var urlStr = window.location.href;
+	var urlParam = new URL(urlStr);
+
+	var v = urlParam.searchParams.get("v"); //value
+	var a = urlParam.searchParams.get("a"); //aduana
+	var t = urlParam.searchParams.get("t"); //tasa	
+	var r = urlParam.searchParams.get("rate"); //rate USD/EUR	
+
+	console.log(v,a,t,r);		
+	
+	paramArr = [v,a,t,r];
+	return paramArr;
+
+	//calcula();
+	//fnRateChange(r);
+
 }
 
 
+function setParam() {
+	
+	var wp  = document.getElementById('wp');		
+
+	//leer parametros
+
+	var tipo = localStorage.getItem('rate');
+	var value = document.getElementById('get-precio').value;
+	var a = document.getElementById('optaduana').checked;
+	var t = document.getElementById('optcorreo').checked;	
+
+	//string con los valores ej. 32&a=1&t=1
+	// a=1 con aduana t=1 tasa correo tipo=USD/EUR
+	//https://calcula-afip.web.app/?v=2323%26a=1%26t=0%26rate=USD
+	// %26 -> se usa para escapar el &	
+	var subStr = '/?v=' + value + '%26a=' + a + '%26t=' + t + '%26rate=' + tipo ;
+
+	if(value){
+		wp.href = urlwp + subStr;
+	}else{
+		wp.href="#";
+	}
+
+}
+
 function dark () {		
-		var mode=fnGetValues('mode');
-		if(mode=='dark'){
-			document.body.className=null;				
-			fnSetValues('mode','ligth');
-		}else{
-			document.body.className='dark';				
-			fnSetValues('mode','dark');			
-		}
-	}	
+	var mode=fnGetValues('mode');
+	if(mode=='dark'){
+		document.body.className=null;				
+		fnSetValues('mode','ligth');
+	}else{
+		document.body.className='dark';				
+		fnSetValues('mode','dark');			
+	}
+}	
 
 //verificar estado del check para calcular true=aduana
 function fnaduana (usd,precio) {

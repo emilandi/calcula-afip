@@ -57,6 +57,10 @@ function init () {
 		elem.style.display='block';
 	}
 
+
+
+	
+
 	consulta();
 }
 
@@ -177,18 +181,18 @@ function calcula () {
 	var preciousd=(usd * precio); // usd to ars importe de la compra	
 	
 	if (preciousd==0 || preciousd==null) {		
-		// $('.data').hide();
-		// $('#preciototal').hide();
-		$('.data').fadeOut(200);
-		$('#preciototal').fadeOut(200);			
+		$('.data').hide();
+		$('#preciototal').hide();
+		//$('.data').fadeOut(200);
+		//$('#preciototal').fadeOut(200);			
 			
 	}else{
 		
-		// $('.data').show();		
-		// $('#preciototal').show();
+		$('.data').show();		
+		$('#preciototal').show();
 		
-		$('.data').fadeIn(300);
-		$('#preciototal').fadeIn(300);				
+		//$('.data').fadeIn(300);
+		//$('#preciototal').fadeIn(300);				
 	
 		//Impuesto aduanero
 		var aduana = fnaduana(usd,precio); 
