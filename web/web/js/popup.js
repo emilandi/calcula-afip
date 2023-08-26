@@ -168,6 +168,13 @@ function calcula () {
 	document.getElementById("total").value=fixvalues(preciousd);	
 	document.getElementById("preciototal").value=fixvalues(total);
 
+	var t = (total).toLocaleString('en-US', {
+		style: 'currency',
+		currency: 'ARS',
+	  }); 
+
+	document.getElementById("preciototal").value = t;
+
 	$('.smile').hide();
 	
 	if(total > 999 && total < 9999){

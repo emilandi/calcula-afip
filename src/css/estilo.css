@@ -1,5 +1,5 @@
 html{
-  height: 400px;
+  /*height: 400px;*/
 }
 
 body {
@@ -106,12 +106,16 @@ input {
     border: 0;
 }
 
+#divAduana , #divCorreo , #optrate{
+  display: none;
+}
+
 .data{
   float: right;
   text-align: right;  
   max-width: 150px;
   font-size: 1.2em;
-  display: none;
+  /* display: none; */
 }
 
 /* Chrome, Safari, Edge, Opera */
