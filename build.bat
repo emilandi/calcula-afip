@@ -1,1 +1,0 @@
-rar a output.zip *.html *.json ./js ./css ./img
