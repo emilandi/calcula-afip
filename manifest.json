@@ -22,5 +22,5 @@
    "manifest_version": 3,
    "name": "Calculadora de compras en el exterior",
    "permissions": ["contextMenus"],   
-   "version": "1.0.38"
+   "version": "1.0.39"
 }
