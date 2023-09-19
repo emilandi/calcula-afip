@@ -11,7 +11,8 @@ $(document).ready(function(){
 });
 
 function getDatos () {
-	let url = 'https://www.dolarsi.com/api/api.php?type=dolar';
+	// let url = 'https://www.dolarsi.com/api/api.php?type=dolar';
+	let url = 'https://dolarapi.com/v1/dolares';
 	fetch(url)
   		.then((response) => response.json())  		
   		.then((data) => result(data));		
@@ -19,7 +20,8 @@ function getDatos () {
 
 function result(data) {	
 	console.log(data);
-	var resultado=data[0].casa.venta;	
+	// var resultado=data[0].casa.venta;	
+	var resultado=data[0].venta;	
 	showFade(resultado);
 }
 
@@ -27,7 +29,8 @@ function showFade(resultado) {
 	
 	if(undefined != resultado) {		
 		
-		var usd=resultado.replace(',','.');			
+		// var usd=resultado.replace(',','.');			
+		var usd=resultado;
 
 		var txt = 'AR$ = 1 U$D';
 		var mensaje='Cotizacion actual del dolar: ';

@@ -7,14 +7,16 @@ var sitio = 1;
 
 console.log( "ready!" );
 
-url = 'https://www.dolarsi.com/api/api.php?type=dolar';
+// url = 'https://www.dolarsi.com/api/api.php?type=dolar';
+url = 'https://dolarapi.com/v1/dolares';
 	fetch(url)
   		.then((response) => response.json())  		
   		.then((data) => result(data));	
 
 function result(data) {	
     console.log(data);
-    var resultado=data[0].casa.venta;
+    // var resultado=data[0].casa.venta;
+    var resultado=data[0].venta;
     console.log(resultado);    
 	var fixusd = parseFloat(resultado).toFixed(2);	
     if (fixusd!=undefined) {
